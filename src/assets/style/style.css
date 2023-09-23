@@ -1,9 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;300;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #491E0D;
   scroll-behavior: smooth;
   margin: 0;
-  overflow-y: hidden;
   overflow-x: hidden;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 98%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+p {
+  font-family: "Jost", sans-serif;
 }
 
 header {
@@ -16,8 +39,9 @@ header .logo-nav {
 }
 header .logo-nav .logo {
   position: absolute;
-  left: 45%;
+  left: 43%;
   top: 40px;
+  z-index: 10;
 }
 header .logo-nav nav *, header .logo-nav nav *:before, header .logo-nav nav *:after {
   box-sizing: border-box;
@@ -29,7 +53,6 @@ header .logo-nav nav label .menu {
   z-index: 100;
   width: 200px;
   height: 200px;
-  background: #FCF6F6;
   border-radius: 50% 50% 50% 50%;
   transition: 0.5s ease-in-out;
   box-shadow: 0 0 0 0 #FCF6F6, 0 0 0 0 #FCF6F6;
@@ -100,22 +123,68 @@ header .logo-nav nav label a {
   text-decoration: none;
 }
 
-.billboard .container {
+.showcase {
+  background-image: url(/public/images/secOne.jpg);
+  height: 740px;
+  background-size: cover;
+  background-position: center;
+  --mask: linear-gradient(to bottom,
+    rgba(0,0,0, 1) 0, rgba(0,0,0, 1) 75%,
+    rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+  ) 100% 50% / 100% 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.section-two {
+  margin-top: 3%;
+  padding-bottom: 20%;
+}
+.section-two .sectwo-header {
+  color: aliceblue;
+  font-family: "Gloock", serif;
+  text-align: right;
+}
+.section-two .sectwo-header h1 {
+  font-size: 48px;
+}
+.section-two .sectwo-header h2 {
+  font-size: 38px;
+}
+.section-two hr {
+  margin-top: 32px;
+}
+.section-two .gallery-and-desc {
+  display: flex;
+}
+.section-two .gallery-and-desc .description {
+  padding-top: 80px;
+  float: left;
+  width: 40%;
+}
+.section-two .gallery-and-desc .description p {
+  color: aliceblue;
+  font-size: 26px;
+  font-weight: 300;
+  padding-bottom: 40px;
+}
+.section-two .gallery-and-desc .gallery-container {
   position: relative;
   width: 320px;
   margin: 100px auto 0 auto;
-  perspective: 1000px;
+  perspective: 800px;
 }
-.billboard .carousel {
-  position: absolute;
-  margin-top: 20px;
+.section-two .gallery-and-desc .carousel {
+  position: relative;
+  margin-top: -90px;
+  margin-left: 300px;
   width: 100%;
-  left: -1%;
+  left: -2%;
   height: 100%;
   transform-style: preserve-3d;
   animation: rotate360 85s infinite forwards linear;
 }
-.billboard .carousel__face {
+.section-two .gallery-and-desc .carousel__face {
   position: absolute;
   width: 310px;
   height: 187px;
@@ -125,48 +194,44 @@ header .logo-nav nav label a {
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.01);
   display: flex;
-  border-radius: 8px;
+  border-radius: 0.8px;
 }
-.billboard span {
-  margin: auto;
-  font-size: 2rem;
-}
-.billboard .carousel__face:nth-child(1) {
-  background-image: url("/public/images/restaurant-1763081_640.jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(1) {
+  background-image: url("/images/restaurant-1763081_640.jpg");
   transform: rotateY(0deg) translateZ(430px);
 }
-.billboard .carousel__face:nth-child(2) {
-  background-image: url("public/images/pexels-antoni-shkraba-5852247 (1).jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(2) {
+  background-image: url("/images/pexels-antoni-shkraba-5852247 (1).jpg");
   transform: rotateY(40deg) translateZ(430px);
 }
-.billboard .carousel__face:nth-child(3) {
-  background-image: url("public/images/pexels-yente-van-eynde-2403391.jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(3) {
+  background-image: url("/images/pexels-yente-van-eynde-2403391.jpg");
   background-position: center left;
   transform: rotateY(80deg) translateZ(430px);
 }
-.billboard .carousel__face:nth-child(4) {
-  background-image: url("public/images/pexels-kyle-roxas-2122294.jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(4) {
+  background-image: url("/images/pexels-kyle-roxas-2122294.jpg");
   transform: rotateY(120deg) translateZ(430px);
 }
-.billboard .carousel__face:nth-child(5) {
-  background-image: url("public/images/pexels-cottonbro-studio-3298057.jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(5) {
+  background-image: url("/images/pexels-cottonbro-studio-3298057.jpg");
   transform: rotateY(160deg) translateZ(430px);
 }
-.billboard .carousel__face:nth-child(6) {
-  background-image: url("public/images/pexels-valeria-boltneva-1123260.jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(6) {
+  background-image: url("/images/pexels-valeria-boltneva-1123260.jpg");
   transform: rotateY(200deg) translateZ(430px);
 }
-.billboard .carousel__face:nth-child(7) {
-  background-image: url("public/images/platting-4282016_640.jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(7) {
+  background-image: url("/images/platting-4282016_640.jpg");
   background-position: bottom;
   transform: rotateY(240deg) translateZ(430px);
 }
-.billboard .carousel__face:nth-child(8) {
-  background-image: url("public/images/restaurant-449952_640.jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(8) {
+  background-image: url("/images/restaurant-449952_640.jpg");
   transform: rotateY(280deg) translateZ(430px);
 }
-.billboard .carousel__face:nth-child(9) {
-  background-image: url("public/images/mgg-vitchakorn-PLyJqEJVre0-unsplash (1).jpg");
+.section-two .gallery-and-desc .carousel__face:nth-child(9) {
+  background-image: url("/images/mgg-vitchakorn-PLyJqEJVre0-unsplash (1).jpg");
   background-position: bottom;
   transform: rotateY(320deg) translateZ(430px);
 }

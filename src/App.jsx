@@ -1,7 +1,11 @@
-// import Header from "./components/Header";
 
-// function App(){
-//   <Header/>
-// }
+import HomePage from "./structure/Homepage";
+function App(){
+return(
+    <>
+    <HomePage/>
+    </>
+)
+}
 
-// export default App;
+export default App;
