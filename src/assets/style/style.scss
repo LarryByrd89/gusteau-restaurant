@@ -1,0 +1,219 @@
+
+
+body{
+    background-color: #491E0D;
+    scroll-behavior: smooth;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header{
+    padding: 0px 40px;
+    background-color: #FCF6F6;
+
+    height: 250px;
+    
+    .logo-nav{
+        display: flex;
+
+        .logo{
+            position: absolute;
+            left: 45%;
+            top: 40px;
+        }
+
+    
+
+    nav{
+    
+        *, *:before, *:after 
+        { box-sizing: border-box; }
+        
+
+        
+        label .menu {
+          position: absolute;
+          right: -100px;
+          top: 10px;
+          z-index: 100;
+          width: 200px;
+          height: 200px;
+          background: #FCF6F6;
+          border-radius: 50% 50% 50% 50%;
+          -webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+          box-shadow: 0 0 0 0 #FCF6F6, 0 0 0 0 #FCF6F6;
+          cursor: pointer;
+          
+        }
+        
+        label .hamburger {
+          position: absolute;
+          top: 135px;
+          left: 10px;
+          width: 60px;
+          height: 5px;
+          background: #69D2e7;
+          display: block;
+          -webkit-transform-origin: center;
+          transform-origin: center;
+          -webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+          border-radius: 3px;
+        }
+        
+        label .hamburger:after, label .hamburger:before {
+          -webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: #69d2e7;
+          border-radius: 3px;
+        }
+        
+        label .hamburger:before { top: -10px; }
+        
+        label .hamburger:after { bottom: -10px; }
+        
+        label input { display: none; }
+        
+        label input:checked + .menu {
+          box-shadow: 0 0 0 100vw #FCF6F6, 0 0 0 100vh #FFF;
+          border-radius: 0;
+          
+        }
+        
+        label input:checked + .menu .hamburger {
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          
+        }
+        
+        label input:checked + .menu .hamburger:after {
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          bottom: 0;
+          
+        }
+        
+        label input:checked + .menu .hamburger:before {
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          top: 0;
+          
+        }
+        
+        label input:checked + .menu + ul { opacity: 1; }
+        
+        label ul {
+          z-index: 200;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          -webkit-transition: .25s 0s ease-in-out;
+          transition: .25s 0s ease-in-out;
+        }
+        
+        label a {
+          margin-bottom: 1em;
+          display: block;
+          color: #f38630;
+          text-decoration: none;
+          
+        }
+        
+        }
+}
+
+}
+
+
+.billboard{
+
+      .container {
+        position: relative;
+        width: 320px;
+        margin: 100px auto 0 auto;
+        perspective: 1000px;
+      }
+      
+      .carousel {
+        position: absolute;
+        margin-top: 20px;
+        width: 100%;
+        left: -1%;
+        height: 100%;
+        transform-style: preserve-3d; 
+        animation: rotate360  85s infinite forwards linear;
+        
+      }
+      .carousel__face { 
+        position: absolute;
+        width: 310px;
+        height: 187px;
+        top: 20px;
+        left: 10px;
+        right: 10px;
+        background-size: cover;
+        box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.01);
+        display: flex;
+        border-radius: 8px;
+      }
+      
+      span {
+        margin: auto;
+        font-size: 2rem;
+      }
+      
+      
+      .carousel__face:nth-child(1) {
+        background-image: url("/public/images/restaurant-1763081_640.jpg");
+        
+        transform: rotateY(  0deg) translateZ(430px); }
+      .carousel__face:nth-child(2) { 
+        background-image: url("public/images/pexels-antoni-shkraba-5852247\ \(1\).jpg");
+          transform: rotateY( 40deg) translateZ(430px); }
+      .carousel__face:nth-child(3) {
+        background-image: url("public/images/pexels-yente-van-eynde-2403391.jpg");
+        background-position: center left;
+        transform: rotateY( 80deg) translateZ(430px); }
+      .carousel__face:nth-child(4) {
+        background-image: url("public/images/pexels-kyle-roxas-2122294.jpg");
+        transform: rotateY(120deg) translateZ(430px); }
+      .carousel__face:nth-child(5) { 
+        background-image: url("public/images/pexels-cottonbro-studio-3298057.jpg");
+       transform: rotateY(160deg) translateZ(430px); }
+      .carousel__face:nth-child(6) { 
+        background-image: url("public/images/pexels-valeria-boltneva-1123260.jpg");
+       transform: rotateY(200deg) translateZ(430px); }
+      .carousel__face:nth-child(7) { 
+        background-image: url("public/images/platting-4282016_640.jpg");
+        background-position: bottom;
+       transform: rotateY(240deg) translateZ(430px); }
+      .carousel__face:nth-child(8) {
+        background-image: url("public/images/restaurant-449952_640.jpg");
+        transform: rotateY(280deg) translateZ(430px); }
+      .carousel__face:nth-child(9) {
+        background-image: url("public/images/mgg-vitchakorn-PLyJqEJVre0-unsplash\ \(1\).jpg");
+        background-position: bottom ;
+        transform: rotateY(320deg) translateZ(430px); }
+      
+      
+      
+      @keyframes rotate360 {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(-360deg);
+        }
+      }
+      
+}
