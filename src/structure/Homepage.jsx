@@ -1,15 +1,17 @@
-import Header from '../components/Header'
-import SectionOne from '../components/SectionOne';
-import Billboard from '../components/SectionTwo';
-import SectionThree from '../components/SectionThree';
+import Header from '../Home Components/Header'
+import SectionOne from '../Home Components/SectionOne';
+import SectionTwo from '../Home Components/SectionTwo';
+import SectionThree from '../Home Components/SectionThree';
+import SectonFour from '../Home Components/SectionFour';
 
 function HomePage(){
 return(
     <>
     <Header/>
     <SectionOne/>
-    <Billboard/>
+    <SectionTwo/>
     <SectionThree/>
+    <SectonFour/>
     </>
 )
 }

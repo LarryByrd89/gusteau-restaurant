@@ -260,7 +260,7 @@ header .logo-nav nav label a {
 
 .section-three {
   color: aliceblue;
-  margin-top: 80px;
+  margin-top: 140px;
 }
 .section-three .sec-three-header h2 {
   font-size: 38px;
@@ -289,7 +289,70 @@ header .logo-nav nav label a {
   font-size: 26px;
   font-weight: 300;
   text-align: center;
-  width: 90%;
   margin-top: 90px;
   padding-bottom: 40px;
+}
+
+.section-four {
+  margin-top: 380px;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-840px);
+  }
+}
+.section-four .slider-one .slider {
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+}
+.section-four .slider-one .slider::before, .section-four .slider-one .slider::after {
+  content: "";
+  height: 400px;
+  position: absolute;
+  width: 1400px;
+  z-index: 2;
+}
+.section-four .slider-one .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.section-four .slider-one .slider::before {
+  left: 0;
+  top: 0;
+}
+.section-four .slider-one .slider .slide-track {
+  animation: scroll 140s linear infinite;
+  display: flex;
+  width: 1440px;
+}
+.section-four .slider-one .slider .slide {
+  height: 200px;
+  width: 250px;
+}
+.section-four .secfour-header {
+  color: aliceblue;
+  margin-top: 60px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+.section-four h2 {
+  font-family: "Gloock", serif;
+  font-size: 38px;
+  padding-bottom: 20px;
+}
+.section-four h3 {
+  font-family: "Gloock", serif;
+  font-size: 32px;
+  padding-bottom: 18px;
+}
+.section-four p {
+  font-size: 26px;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

@@ -303,7 +303,7 @@ header{
 
 .section-three{
   color: aliceblue;
-  margin-top: 80px;
+  margin-top: 140px;
 
   .sec-three-header{
      h2{
@@ -342,11 +342,90 @@ header{
     font-size: 26px;
     font-weight: 300;
     text-align: center;
-    width: 90%;
     margin-top: 90px;
     padding-bottom: 40px;
 
     
   }
 
+}
+
+.section-four{
+    margin-top: 380px;
+
+    .slider-one{
+    
+    // Animation
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-140px * 6))}
+    }
+    
+    
+    // Styling
+    .slider {
+        height: 400px;
+        margin: auto;
+        overflow:hidden;
+        position: relative;
+        border-radius: 2px;
+
+        
+        &::before,
+        &::after {
+            content: "";
+            height: 400px;
+            position: absolute;
+            width: 1400px;
+            z-index: 2;
+        }
+        
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+    
+        &::before {
+            left: 0;
+            top: 0;
+        }
+        
+        .slide-track {
+            animation: scroll 140s linear infinite;
+            display: flex;
+            width: calc(1440px);
+        }
+        
+        .slide {
+            height: 200px;
+            width: 250px;
+        }
+    }
+
+    }
+
+    .secfour-header{
+      color: aliceblue;
+      margin-top: 60px;
+      margin-bottom: 200px;
+      text-align: center;
+    }
+
+    h2{
+      font-family: 'Gloock', serif;
+      font-size: 38px;
+      padding-bottom: 20px;
+    }
+
+    h3{
+      font-family: 'Gloock', serif;
+      font-size: 32px;
+      padding-bottom: 18px;
+    }
+
+    p{
+      font-size: 26px;
+      font-weight: 300;
+    }
 }
