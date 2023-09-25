@@ -27,18 +27,30 @@ body{
 	margin: 0 auto;	
 }
 
-p{
+p, li{
   font-family: 'Jost', sans-serif;
 }
 
 header{
     padding: 0px 40px;
     background-color: #FCF6F6;
-
+    z-index: 4;
     height: 250px;
     
     .logo-nav{
         display: flex;
+
+      .information{
+        display: flex;
+        font-size: 22px;
+        font-weight: 400; 
+        margin-top: 120px;
+
+        li{
+          list-style-type: none;
+          text-align: right;
+        }
+      }
 
         .logo{
             position: absolute;
@@ -46,6 +58,8 @@ header{
             top: 40px;
             z-index: 10;
         }
+
+
     nav{
     
         *, *:before, *:after 
@@ -153,22 +167,25 @@ header{
 
 .showcase{
   background-image: url(/public/images/secOne.jpg);
-  height: 740px;
+  height: 880px;
   background-size: cover;
   background-position: center;
 
   --mask: linear-gradient(to bottom, 
-  rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 75%, 
+  rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 65%, 
   rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
 ) 100% 50% / 100% 100% repeat-x;
   -webkit-mask: var(--mask); 
   mask: var(--mask);
   
+  z-index: 4;
+
 }
 
 .section-two{
-  margin-top: 3%;
+  margin-top: 8%;
   padding-bottom: 20%;
+  z-index: 4;
   
   .sectwo-header{
     color: aliceblue;
@@ -193,9 +210,10 @@ header{
     display: flex;
 
     .description{
-      padding-top: 80px;
+      padding-top: 180px;
       float: left;
-      width: 40%;
+      width: 48%;
+      text-align: center;
 
       p{
         color: aliceblue;
@@ -281,4 +299,54 @@ header{
         }
       }
     }
+}
+
+.section-three{
+  color: aliceblue;
+  margin-top: 80px;
+
+  .sec-three-header{
+     h2{
+      font-size: 38px;
+      font-family: 'Gloock', serif;
+      padding-bottom: 20px;
+      
+     }
+
+     h3{
+      font-family: 'Gloock', serif;
+      font-size: 32px;
+      padding-bottom: 20px;
+     }
+
+  }
+
+  .home-parallax{
+    background-image: url(/public/images/static-gallery.png);
+    min-height: 555px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    --mask: linear-gradient(to top, 
+    rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 94%, 
+    rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+  ) 100% 50% / 100% 100% repeat-x;
+    -webkit-mask: var(--mask); 
+    mask: var(--mask);
+
+    
+    
+  }
+  .sec-three-desc{
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+    width: 90%;
+    margin-top: 90px;
+    padding-bottom: 40px;
+
+    
+  }
+
 }
