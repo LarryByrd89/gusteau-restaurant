@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #491E0D;
+  background-color: aliceblue;
   scroll-behavior: smooth;
   margin: 0;
   overflow-x: hidden;
@@ -154,7 +154,7 @@ header .logo-nav nav label a {
   z-index: 4;
 }
 .section-two .sectwo-header {
-  color: aliceblue;
+  color: #491E0D;
   font-family: "Gloock", serif;
   text-align: right;
 }
@@ -177,7 +177,7 @@ header .logo-nav nav label a {
   text-align: center;
 }
 .section-two .gallery-and-desc .description p {
-  color: aliceblue;
+  color: #491E0D;
   font-size: 26px;
   font-weight: 300;
   padding-bottom: 40px;
@@ -259,8 +259,9 @@ header .logo-nav nav label a {
 }
 
 .section-three {
-  color: aliceblue;
-  margin-top: 140px;
+  color: #491E0D;
+  padding-top: 140px;
+  padding-bottom: 90px;
 }
 .section-three .sec-three-header h2 {
   font-size: 38px;
@@ -274,7 +275,7 @@ header .logo-nav nav label a {
 }
 .section-three .home-parallax {
   background-image: url(/public/images/static-gallery.png);
-  min-height: 555px;
+  min-height: 485px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -337,7 +338,7 @@ header .logo-nav nav label a {
   width: 250px;
 }
 .section-four .secfour-header {
-  color: aliceblue;
+  color: #491E0D;
   margin-top: 60px;
   margin-bottom: 200px;
   text-align: center;

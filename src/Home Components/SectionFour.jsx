@@ -1,4 +1,4 @@
-function SectonFour(){
+function SectionFour(){
     return(
         <>
     <section className="section-four">
@@ -62,4 +62,4 @@ function SectonFour(){
     )
 }
 
-export default SectonFour;
+export default SectionFour;
