@@ -1,5 +1,3 @@
-import siteIcon from '../assets/images/Logo.png'
-import headchef from '../assets/images/headchef.jpg'
 
 function Aboutpage(){
     return(
@@ -22,11 +20,16 @@ function Aboutpage(){
             </div>
         </section>
 
-        <section className="process">
-            <h2 className="container">Our Process</h2>
-        </section>
+    <section className="process">
+    <div className="container">
+        <h2>Our Process</h2>
+        <h3>Learn Our Day To Day</h3>
+    </div>
+
+    </section>
+
         </>
-    )
+)
 
 }
 
