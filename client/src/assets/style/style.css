@@ -396,4 +396,8 @@ header .logo-nav nav label a {
 
 .process h2 {
   font-size: 38px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.footer .bottom-navigation {
+  display: none;
+}

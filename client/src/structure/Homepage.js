@@ -8,7 +8,15 @@ import bun from '../assets/images/bun-dish.png'
 import yellow from '../assets/images/yellow-dish.png'
 import star from '../assets/images/star-dish.png'
 
-function HomePage(){
+import React, { useState } from 'react';
+
+function HomePage() {
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
+    };
+    
 return(
     <>
     <header>
@@ -18,7 +26,7 @@ return(
                 <ul>
                     <li>1800 S Main St, Roswell NY </li>
                     <li>575-627-0144</li>
-                    <li>Opening Hours From 1:00pm - 10:00pm</li>
+                    <li>Opening Hours From 3:00pm - 10:00pm</li>
                 </ul>
             </div>
             </div>
@@ -28,10 +36,16 @@ return(
             <div className="nav">
                 <nav>
                 <label>
-                    <input type="checkbox"/>
-                    <span className="menu"> <span className="hamburger"></span> </span>
-
-                    </label>
+                <input type="checkbox"/>
+                <span class="menu"> <span class="hamburger"></span> </span>
+                <ul>
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">About Us</a> </li>
+                <li> <a href="#">Dinner Menu</a> </li>
+                <li> <a href="#">Guest Membership</a> </li>
+                <li> <a href="#">Contact</a> </li>
+                </ul>
+                </label>
                 </nav>
             </div>
         </div>
