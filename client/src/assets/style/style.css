@@ -30,12 +30,11 @@ h1, h2, h3, h4 {
   font-family: "Gloock", serif;
 }
 
-p, li {
+p, li, input {
   font-family: "Jost", sans-serif;
 }
 
 header {
-  padding: 0px 40px;
   background-color: #FCF6F6;
   z-index: 4;
   height: 250px;
@@ -47,16 +46,18 @@ header .logo-nav .information {
   display: flex;
   font-size: 22px;
   font-weight: 400;
-  margin-top: 120px;
+  margin-top: 80px;
+}
+header .logo-nav .information .store-info {
+  text-align: right;
 }
 header .logo-nav .information li {
   list-style-type: none;
-  text-align: right;
 }
 header .logo-nav .logo {
   position: absolute;
   left: 43%;
-  top: 40px;
+  top: 23px;
   z-index: 10;
 }
 header .logo-nav nav *, header .logo-nav nav *:before, header .logo-nav nav *:after {
@@ -65,7 +66,7 @@ header .logo-nav nav *, header .logo-nav nav *:before, header .logo-nav nav *:af
 header .logo-nav nav label .menu {
   position: absolute;
   right: -100px;
-  top: 10px;
+  top: 20px;
   z-index: 100;
   width: 200px;
   height: 200px;
@@ -80,7 +81,7 @@ header .logo-nav nav label .hamburger {
   left: 10px;
   width: 60px;
   height: 5px;
-  background: #69D2e7;
+  background: #491E0D;
   display: block;
   transform-origin: center;
   transition: 0.5s ease-in-out;
@@ -93,7 +94,7 @@ header .logo-nav nav label .hamburger:after, header .logo-nav nav label .hamburg
   display: block;
   width: 100%;
   height: 100%;
-  background: #69d2e7;
+  background-color: #491E0D;
   border-radius: 3px;
 }
 header .logo-nav nav label .hamburger:before {
@@ -393,7 +394,67 @@ header .logo-nav nav label a {
   mask: var(--mask);
   transform: scaleX(-1);
 }
-
-.process h2 {
+.about-showcase .process h2 {
   font-size: 38px;
+}
+.about-showcase .process h3 {
+  font-size: 32px;
+}
+
+footer {
+  background-image: url(../images/jonathan-cooper-zOStFJh3Q-A-unsplash.jpg);
+  min-height: 285px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer input:focus {
+  outline: none;
+}
+footer form {
+  padding: 40px 0px 40px 0px;
+}
+footer form #email {
+  height: 35px;
+  width: 180px;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #491E0D;
+  color: #491E0D;
+  font-size: 16px;
+}
+footer form #password {
+  margin-left: 24px;
+  height: 35px;
+  width: 200px;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #491E0D;
+  color: #491E0D;
+  font-size: 16px;
+}
+footer form #register {
+  background-color: transparent;
+  padding: 6px;
+  border: 1px dashed #491E0D;
+  border-radius: 3px;
+  margin-left: 40px;
+}
+footer form #member {
+  background-color: transparent;
+  padding: 6px;
+  margin-left: 66px;
+  border: 1px dashed #491E0D;
+  border-radius: 3px;
+}
+footer form #register:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+}
+footer form #member:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+}
+footer li {
+  list-style: none;
 }/*# sourceMappingURL=style.css.map */

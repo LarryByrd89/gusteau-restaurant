@@ -8,13 +8,17 @@ import bun from '../assets/images/bun-dish.png'
 import yellow from '../assets/images/yellow-dish.png'
 import star from '../assets/images/star-dish.png'
 
+let siteName = 'Patron';
+
 function HomePage(){
 return(
     <>
+
     <header>
-        <div className="logo-nav">
+        <div className="logo-nav container">
             <div className="information">
             <div className="store-info">
+                <p>Welcome {siteName}</p>
                 <ul>
                     <li>1800 S Main St, Roswell NY </li>
                     <li>575-627-0144</li>
@@ -158,6 +162,28 @@ return(
 </div>
 
             </section>
+
+
+<footer>
+ <form>
+        <div className="container">
+        <input type="email" id="email" placeholder="Email"/>
+        <input type="password"  id="password" placeholder="Password"/>
+        <input id="register" type="submit" value="Register"/>
+        <input id="member" type="submit" value="Log In"/>
+        </div>
+    </form>
+
+    <div className="store-info container">
+                <p>Welcome {siteName}</p>
+                <ul>
+                    <li>1800 S Main St, Roswell NY </li>
+                    <li>575-627-0144</li>
+                    <li>Opening Hours From 1:00pm - 10:00pm</li>
+                </ul>
+            </div>
+
+</footer>
 
     </>
 )
