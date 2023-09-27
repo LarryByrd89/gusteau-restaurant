@@ -25,7 +25,7 @@ return(
         <div className="logo-nav container">
             <div className="information">
             <div className="store-info">
-                <p>Welcome {siteName}</p>
+                <p>Welcome</p>
                 <ul>
                     <li>1800 S Main St, Roswell NY </li>
                     <li>575-627-0144</li>
@@ -188,7 +188,7 @@ return(
     </form>
 
     <div className="store-info container">
-                <p>Welcome {siteName}</p>
+                <p>Welcome</p>
                 <ul>
                     <li>1800 S Main St, Roswell NY </li>
                     <li>575-627-0144</li>
