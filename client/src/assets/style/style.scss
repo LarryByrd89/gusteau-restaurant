@@ -13,6 +13,7 @@ body{
     scroll-behavior: smooth;
     margin: 0;
     overflow-x: hidden;
+   color:  #491E0D;
 }
 
 .clearfix:after{
@@ -27,6 +28,9 @@ body{
 	margin: 0 auto;	
 }
 
+h1, h2, h3, h4{
+  font-family: 'Gloock', serif;
+}
 p, li{
   font-family: 'Jost', sans-serif;
 }
@@ -189,7 +193,6 @@ header{
   
   .sectwo-header{
     color:  #491E0D;
-    font-family: 'Gloock', serif;
     text-align: right;
 
 
@@ -309,13 +312,11 @@ header{
   .sec-three-header{
      h2{
       font-size: 38px;
-      font-family: 'Gloock', serif;
       padding-bottom: 20px;
       
      }
 
      h3{
-      font-family: 'Gloock', serif;
       font-size: 32px;
       padding-bottom: 20px;
      }
@@ -414,13 +415,11 @@ header{
     }
 
     h2{
-      font-family: 'Gloock', serif;
       font-size: 38px;
       padding-bottom: 20px;
     }
 
     h3{
-      font-family: 'Gloock', serif;
       font-size: 32px;
       padding-bottom: 18px;
     }
@@ -429,4 +428,53 @@ header{
       font-size: 26px;
       font-weight: 300;
     }
+}
+
+.about-showcase{
+  display: flex;
+  
+
+  .description{
+    padding-top: 80px;
+    padding-left: 40px;
+    width: 50%;
+    
+
+
+    h1{
+      font-size: 48px;
+    }
+
+    h2{
+      margin-top: 22px;
+      margin-bottom: 40px;
+      font-size: 38px;
+    }
+    p{
+      padding-top: 10px;
+      font-size: 22px;
+      width: 85%;
+      font-weight: 300;
+    }
+  }
+
+  .chef-showcase{
+    background-image: url(../images/headchef.jpg);
+    width: 50%;
+    height: 670px;
+    background-size: cover;
+    --mask: linear-gradient(to right, 
+    rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 55%, 
+    rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+  ) 100% 50% / 100% 100% repeat-x;
+    -webkit-mask: var(--mask); 
+    mask: var(--mask);
+    transform: scaleX(-1);
+  }
+}
+
+.process{
+  h2{
+    font-size: 38px;
+  }
 }
