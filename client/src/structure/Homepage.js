@@ -24,16 +24,17 @@ return(
 
     <header>
         <div className="logo-nav container">
-            <div className="information">
-            <div className="store-info">
-                <p>Welcome</p>
-                <ul>
-                    <li>1800 S Main St, Roswell NY </li>
-                    <li>575-627-0144</li>
-                    <li>Opening Hours From 1:00pm - 10:00pm</li>
-                </ul>
-            </div>
-            </div>
+
+        <div class="scrolling-words-container">
+  <div class="scrolling-words-box">
+    <ul>
+    <li>1800 S Main St, Roswell NY </li>
+    <li>575-627-0144</li>
+    <li>Opening Hours From 1:00pm - 10:00pm</li>
+    </ul>
+  </div>
+</div>
+
             <div className="logo">
                 <img src={siteIcon} alt="Le Bon Manges"/>
             </div>
@@ -44,11 +45,11 @@ return(
                 <span class="menu"> <span class="hamburger"></span> 
                 </span>
                 <ul>
-                <li> <Link to="/">Home</Link> </li>
-                <li> <Link to="/about">About Us</Link> </li>
-                <li>  <Link to="/dinner-menu">Dinner Menu</Link> </li>
-                <li> <Link to="/guest-membership">Guest Membership</Link> </li>
-                <li> <Link to="/contact">Contact</Link> </li>
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">About Us</a> </li>
+                <li> <a href="#">Dinner Menu</a> </li>
+                <li> <a href="#">Patron Perks</a> </li>
+                <li> <a href="#">Contact</a> </li>
                 </ul>
                 </label>
                 </nav>
@@ -180,15 +181,6 @@ return(
 
 
 <footer>
- <form>
-        <div className="container">
-        <input type="email" id="email" placeholder="Email"/>
-        <input type="password"  id="password" placeholder="Password"/>
-        <input id="register" type="submit" value="Register"/>
-        <input id="member" type="submit" value="Log In"/>
-        </div>
-    </form>
-
     <div className="store-info container">
                 <p>Welcome</p>
                 <ul>
