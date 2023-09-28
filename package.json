@@ -14,7 +14,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "react-router-dom": "^6.16.0"
   },
   "dependencies": {
     "jquery": "^3.7.1"
