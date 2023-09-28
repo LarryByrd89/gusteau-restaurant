@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { Profile } = require("../models");
 
 router.post("/signup", (req, res) => {
-  User.create(req.body)
-    .then((user) => res.json(user))
+  Profile.create(req.body)
+    .then((profile) => res.json(profile))
     .catch((err) => {
       console.log(err);
       return res.status(500).json(err);
@@ -11,9 +11,12 @@ router.post("/signup", (req, res) => {
 });
 
 router.post("/login", (req, res) => {
-  User.findOne({ username: req.params.userName, password: req.params.password })
-    .then((user) => {
-      if (!user) {
+  Profile.findOne({
+    userName: req.body.userName,
+    password: req.body.password,
+  })
+    .then((profile) => {
+      if (!profile) {
         res.status(404).json({ message: "No user with that username" });
         return;
       }
@@ -21,10 +24,13 @@ router.post("/login", (req, res) => {
         req.session.userId = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
-        res.json(user); // probably need to put login data on session here
       });
+      res.json(profile);
     })
-    .catch((err) => res.status(500).json(err));
+    .catch((err) => {
+      console.log(err);
+      return res.status(500).json(err);
+    });
 });
 
 router.post("/logout", (req, res) => {
@@ -38,25 +44,25 @@ router.post("/logout", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  User.findOneAndUpdate(
-    { _id: req.params.userId },
+  Profile.findOneAndUpdate(
+    { _id: req.params.id },
     { $set: req.body },
     { runValidators: true, new: true }
   )
-    .then((user) =>
-      !user
+    .then((profile) =>
+      !profile
         ? res.status(404).json({ message: "No user with this id!" })
-        : res.json(user)
+        : res.json(profile)
     )
     .catch((err) => res.status(500).json(err));
 });
 
 router.delete("/:id", (req, res) => {
-  User.findOneAndDelete({ _id: req.params.userId })
-    .then((user) =>
-      !user
+  Profile.findOneAndDelete({ _id: req.params.id })
+    .then((profile) =>
+      !profile
         ? res.status(404).json({ message: "No user with that ID" })
-        : res.json(user)
+        : res.json(profile)
     )
     .catch((err) => res.status(500).json(err));
 });
