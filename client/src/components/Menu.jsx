@@ -13,7 +13,7 @@ const Menu = () => {
                 <img className='menu__image' src={menu2} alt="menu page 2" />
             </div>
             <div id="downloadMenu__link">
-                <a href={leBonMenu} download="leBonMenu">Download our Menu!</a>
+                <a href={leBonMenu} download="leBonMenu">Download our Menu here!</a>
             </div>
         </section>
 
