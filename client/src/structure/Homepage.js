@@ -30,7 +30,7 @@ return(
                 <ul>
                     <li>1800 S Main St, Roswell NY </li>
                     <li>575-627-0144</li>
-                    <li>Opening Hours From 3:00pm - 10:00pm</li>
+                    <li>Opening Hours From 1:00pm - 10:00pm</li>
                 </ul>
             </div>
             </div>

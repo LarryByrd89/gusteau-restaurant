@@ -1,5 +1,5 @@
 import HomePage from "./structure/Homepage";
-// import AboutPage from "./structure/Aboutpage";
+import AboutPage from "./structure/Aboutpage";
 // import DinnerMenuPage from "./structure/DinnerMenuPage";
 // import GuestMembershipPage from "./structure/GuestMembershipPage";
 // import ContactPage from "./structure/ContactPage";
@@ -32,11 +32,11 @@ function App() {
         </nav>
        </div>
      <Routes>
-     <Route exact path="/" element={<HomePage/>}/>
-         {/* <Route path="/about" component={AboutPage} /> */}
-        {/* <Route path="/dinner-menu" component={DinnerMenuPage} />
-       <Route path="/guest-membership" component={GuestMembershipPage} />
-       <Route path="/contact" component={ContactPage} /> */}
+        <Route exact path="/" element={<HomePage/>}/>
+        <Route path="/about" element={<AboutPage />} />
+        {/* <Route path="/dinner-menu" element={DinnerMenuPage} />
+       <Route path="/guest-membership" element={GuestMembershipPage} />
+       <Route path="/contact" element={ContactPage} /> */}
     </Routes>
     </Router>
   );

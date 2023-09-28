@@ -69,9 +69,15 @@ header{
 
     nav{
     
-        *, *:before, *:after 
-        { box-sizing: border-box; }
+        *, *:before, *:after { 
+          box-sizing: border-box; 
+        }
+
         
+        label .menu,
+        label input:checked + ul {
+          display: none;
+        }
 
         
         label .menu {
@@ -168,6 +174,8 @@ header{
           color: #f38630;
           text-decoration: none;
         }
+
+        
         }
       }
 }
@@ -494,6 +502,9 @@ footer{
   background-repeat: no-repeat;
   background-size: cover;
 
+  .footer-navigation a {
+    display: none;
+  }
 
   input:focus {
     outline: none;
@@ -556,5 +567,6 @@ footer{
   li{
     list-style: none;
   }
+  
 
 }
