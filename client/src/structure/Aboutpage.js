@@ -20,13 +20,10 @@ function Aboutpage(){
             </div>
         </section>
 
-    <section className="process">
-    <div className="container">
-        <h2>Our Process</h2>
-        <h3>Learn Our Day To Day</h3>
-    </div>
-
-    </section>
+        <section className="statement container">
+            <h2>Who We Are</h2>
+            <h3>What We Aim </h3>
+        </section>
 
         </>
 )
