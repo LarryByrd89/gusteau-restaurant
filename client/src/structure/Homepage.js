@@ -10,6 +10,7 @@ import star from '../assets/images/star-dish.png'
 
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -40,13 +41,14 @@ return(
                 <nav>
                 <label>
                 <input type="checkbox"/>
-                <span class="menu"> <span class="hamburger"></span> </span>
+                <span class="menu"> <span class="hamburger"></span> 
+                </span>
                 <ul>
-                <li> <a href="#">Home</a> </li>
-                <li> <a href="#">About Us</a> </li>
-                <li> <a href="#">Dinner Menu</a> </li>
-                <li> <a href="#">Guest Membership</a> </li>
-                <li> <a href="#">Contact</a> </li>
+                <li> <Link to="/">Home</Link> </li>
+                <li> <Link to="/about">About Us</Link> </li>
+                <li>  <Link to="/dinner-menu">Dinner Menu</Link> </li>
+                <li> <Link to="/guest-membership">Guest Membership</Link> </li>
+                <li> <Link to="/contact">Contact</Link> </li>
                 </ul>
                 </label>
                 </nav>
