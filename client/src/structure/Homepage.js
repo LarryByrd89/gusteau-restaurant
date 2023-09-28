@@ -10,6 +10,7 @@ import star from '../assets/images/star-dish.png'
 
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -41,7 +42,8 @@ return(
                 <nav>
                 <label>
                 <input type="checkbox"/>
-                <span class="menu"> <span class="hamburger"></span> </span>
+                <span class="menu"> <span class="hamburger"></span> 
+                </span>
                 <ul>
                 <li> <a href="#">Home</a> </li>
                 <li> <a href="#">About Us</a> </li>
