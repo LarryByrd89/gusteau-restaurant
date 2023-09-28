@@ -396,4 +396,65 @@ header .logo-nav nav label a {
 }
 .about-showcase .process h2 {
   font-size: 38px;
+}
+.about-showcase .process h3 {
+  font-size: 32px;
+}
+
+footer {
+  background-image: url(../images/jonathan-cooper-zOStFJh3Q-A-unsplash.jpg);
+  min-height: 285px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer input:focus {
+  outline: none;
+}
+footer form {
+  padding: 40px 0px 40px 0px;
+}
+footer form #email {
+  height: 35px;
+  width: 180px;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #491E0D;
+  color: #491E0D;
+  font-size: 16px;
+}
+footer form #password {
+  margin-left: 24px;
+  height: 35px;
+  width: 200px;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #491E0D;
+  color: #491E0D;
+  font-size: 16px;
+}
+footer form #register {
+  background-color: transparent;
+  padding: 6px;
+  border: 1px dashed #491E0D;
+  border-radius: 3px;
+  margin-left: 40px;
+}
+footer form #member {
+  background-color: transparent;
+  padding: 6px;
+  margin-left: 66px;
+  border: 1px dashed #491E0D;
+  border-radius: 3px;
+}
+footer form #register:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+}
+footer form #member:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+}
+footer li {
+  list-style: none;
 }/*# sourceMappingURL=style.css.map */
