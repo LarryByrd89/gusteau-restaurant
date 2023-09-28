@@ -193,7 +193,7 @@ header .logo-nav nav label input:checked + .menu .hamburger:before {
   top: 0;
 }
 header .logo-nav nav label input:checked + .menu + ul {
-  opacity: 1;
+  display: block;
 }
 header .logo-nav nav label ul {
   z-index: 200;
@@ -201,7 +201,7 @@ header .logo-nav nav label ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  display: none;
   transition: 0.25s 0s ease-in-out;
 }
 header .logo-nav nav label li {
