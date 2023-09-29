@@ -35,9 +35,9 @@ function Nav(){
         <ul>
         <li> <Link to="/">Home</Link> </li>
         <li> <Link to="/about">About Us</Link> </li>
-        <li> <a href="#">Dinner Menu</a> </li>
-        <li> <a href="#">Patron Perks</a> </li>
-        <li> <a href="#">Contact</a> </li>
+        <li> <Link to="/menu">Menu</Link> </li>
+        <li> <Link to="/guest-membership">Guest Membership</Link> </li>
+        <li> <Link to="/contact">Contact</Link> </li>
         </ul>
         </label>
         </nav>
