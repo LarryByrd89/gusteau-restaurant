@@ -1,5 +1,4 @@
 
-import siteIcon from '../assets/images/Logo.png'
 import orange from '../assets/images/orange-dishes.png'
 import fish from '../assets/images/fish-dish.png'
 import spaghetti from '../assets/images/spaghetti-dish.png'
@@ -10,29 +9,31 @@ import star from '../assets/images/star-dish.png'
 
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    // const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!isDropdownOpen);
-    };
+    // const toggleDropdown = () => {
+    //     setDropdownOpen(!isDropdownOpen);
+    // };
     
 return(
     <>
 
-    <header>
+    {/* <header>
         <div className="logo-nav container">
-            <div className="information">
-            <div className="store-info">
-                <p>Welcome</p>
-                <ul>
-                    <li>1800 S Main St, Roswell NY </li>
-                    <li>575-627-0144</li>
-                    <li>Opening Hours From 3:00pm - 10:00pm</li>
-                </ul>
-            </div>
-            </div>
+
+        <div class="scrolling-words-container">
+  <div class="scrolling-words-box">
+    <ul>
+    <li>1800 S Main St, Roswell NY </li>
+    <li>575-627-0144</li>
+    <li>Opening Hours From 1:00pm - 10:00pm</li>
+    </ul>
+  </div>
+</div>
+
             <div className="logo">
                 <img src={siteIcon} alt="Le Bon Manges"/>
             </div>
@@ -40,19 +41,20 @@ return(
                 <nav>
                 <label>
                 <input type="checkbox"/>
-                <span class="menu"> <span class="hamburger"></span> </span>
+                <span class="menu"> <span class="hamburger"></span> 
+                </span>
                 <ul>
-                <li> <a href="#">Home</a> </li>
-                <li> <a href="#">About Us</a> </li>
+                <li> <Link to="/">Home</Link> </li>
+                <li> <Link to="/about">About Us</Link> </li>
                 <li> <a href="#">Dinner Menu</a> </li>
-                <li> <a href="#">Guest Membership</a> </li>
+                <li> <a href="#">Patron Perks</a> </li>
                 <li> <a href="#">Contact</a> </li>
                 </ul>
                 </label>
                 </nav>
             </div>
         </div>
-        </header>
+        </header> */}
 
 <section className="intro clearfix">
     <div className="showcase"></div>
@@ -177,16 +179,7 @@ return(
             </section>
 
 
-<footer>
- <form>
-        <div className="container">
-        <input type="email" id="email" placeholder="Email"/>
-        <input type="password"  id="password" placeholder="Password"/>
-        <input id="register" type="submit" value="Register"/>
-        <input id="member" type="submit" value="Log In"/>
-        </div>
-    </form>
-
+{/* <footer>
     <div className="store-info container">
                 <p>Welcome</p>
                 <ul>
@@ -196,7 +189,7 @@ return(
                 </ul>
             </div>
 
-</footer>
+</footer> */}
 
     </>
 )

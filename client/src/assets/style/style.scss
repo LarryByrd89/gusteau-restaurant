@@ -8,9 +8,12 @@
 	box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
     background-color: aliceblue;
-    scroll-behavior: smooth;
     margin: 0;
     overflow-x: hidden;
    color:  #491E0D;
@@ -44,20 +47,105 @@ header{
     .logo-nav{
         display: flex;
 
-      .information{
-        display: flex;
-        font-size: 22px;
-        font-weight: 400; 
-        margin-top: 80px;
+        .scrolling-words-container {
+          display: flex;
+          align-items: center;
+          font-size: 1.7rem;
+          font-weight: 600; 
+          margin-top: 100px;
+        }
+        
+        .scrolling-words-box {
 
-        .store-info{
-          text-align: right;
+          height: 3rem;
+          margin: auto;
+          overflow: hidden;
+          
+          ul {
+            margin: 0 0.625rem;
+            padding: 0;
+            animation: scrollUp 10s infinite;
+            li {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              height: 3rem;
+              list-style: none; 
+            }
+          }
+        }
+        
+        // Variables
+        $item-count: 3;
+        
+        @keyframes scrollUp {
+          @for $i from 1 through ($item-count - 1) {
+            #{($i * 25) - 10%}, #{$i * 25%} {
+              transform: translateY((-100% / $item-count) * $i);
+            }
+          }
         }
 
-        li{
-          list-style-type: none;
+
+        form{
+          
+          padding: 40px 0px 40px 0px;
+          margin-top: 50px;
+
+          #email{
+            height: 35px;
+            width: 180px;
+            padding: 4px;
+            border-radius: 6px;
+            border: 1px solid #491E0D;
+            color: #491E0D;
+            font-size: 16px;
+          }
+        
+          #password{
+            margin-left: 24px;
+            height: 35px;
+            width: 200px;
+            padding: 4px;
+            border-radius: 6px;
+            border: 1px solid #491E0D;
+            color: #491E0D;
+            font-size: 16px;
+          }
+
+          #member{
+            background-color: transparent;
+            padding: 6px;
+            border: 1px dashed #491E0D;
+            border-radius: 3px;
+            float: right;
+            margin-top: 30px;
+            margin-right: 30px;
+                
+          }
+        
+        
+          #register{
+            background-color: transparent;
+            padding: 6px;
+            border: 1px dashed #491E0D;
+            border-radius: 3px;
+            float: right;
+            margin-top: 30px;
+
+        
+          }
+        
+          #register:hover{
+            background-color: #491E0D;
+            color: aliceblue;
+          }
+        
+          #member:hover{
+            background-color: #491E0D;
+            color: aliceblue;
+          }
         }
-      }
 
         .logo{
             position: absolute;
@@ -148,23 +236,23 @@ header{
           
         }
         
-        label input:checked + .menu + ul { 
-          display: block;
-        }
+        label input:checked + .menu + ul { display: block; }
         
-        label ul {
+        label ul{
           z-index: 200;
           position: absolute;
           top: 50%;
           left: 50%;
           -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-          // opacity: 0;
           display: none;
           -webkit-transition: .25s 0s ease-in-out;
           transition: .25s 0s ease-in-out;
         }
         
+        label li{
+          list-style-type: none;
+        }
         label a {
           margin-bottom: 1em;
           display: block;
@@ -479,6 +567,7 @@ header{
   }
 
   .process {
+
     h2{
       font-size: 38px;
     }
@@ -490,6 +579,15 @@ header{
 }
 }
 
+.member-type{
+  #feedback { font-size: 1.4em; }
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+  
+}
+
 footer{
   background-image: url(../images/jonathan-cooper-zOStFJh3Q-A-unsplash.jpg);
   min-height: 285px;
@@ -497,64 +595,9 @@ footer{
   background-repeat: no-repeat;
   background-size: cover;
 
-
-  input:focus {
-    outline: none;
-  }
-  form{
- 
-    padding: 40px 0px 40px 0px;
-    
-  
-    #email{
-      height: 35px;
-      width: 180px;
-      padding: 4px;
-      border-radius: 6px;
-      border: 1px solid #491E0D;
-      color: #491E0D;
-      font-size: 16px;
-    }
-  
-    #password{
-      margin-left: 24px;
-      height: 35px;
-      width: 200px;
-      padding: 4px;
-      border-radius: 6px;
-      border: 1px solid #491E0D;
-      color: #491E0D;
-      font-size: 16px;
-    }
-  
-    #register{
-      background-color: transparent;
-      padding: 6px;
-      border: 1px dashed #491E0D;
-      border-radius: 3px;
-      margin-left: 40px;
-  
-    }
-  
-    #member{
-      background-color: transparent;
-      padding: 6px;
-      margin-left: 66px;
-      border: 1px dashed #491E0D;
-      border-radius: 3px;
-    }
-  
-    #register:hover{
-      background-color: #491E0D;
-      color: aliceblue;
-    }
-  
-    #member:hover{
-      background-color: #491E0D;
-      color: aliceblue;
-    }
-  }
-  
+ ul{
+  margin-top: 50px;
+ }
 
   li{
     list-style: none;

@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Aboutpage(){
     return(
@@ -5,15 +7,24 @@ function Aboutpage(){
         <section className='about-showcase'>
             <div className='description'>
                 <h1>
-                    Meet The Residents
+                    About Us
                 </h1>
                 <h2>
-                    From The Front To The Back Of House
+                Step into a world where time stands still.
                 </h2>
 
-                <p>We find all of our staff, essential to our restaurant.</p>
-                <p>From the cleaners who keep the plates and place in top shape to the cooks who uphold our standards for food quality.</p>
-                <p>Everyone here deserves to be mentioned and named.</p>
+                <p>At Le Bon Mange, we're dedicated to the art of culinary enchantment. Our mission is simple: to exceed your expectations with each visit.</p>
+                <p>Every member of our team, from the chefs to the assisting staff, plays a pivotal role in crafting perfection. It's their unwavering dedication that ensures your visit is nothing short of remarkable. We believe that every person behind the scenes contributes to the excellence of the guest experience.</p>
+
+                <br></br>
+
+                <h2>
+                A Symphony of French Delights
+                </h2>
+
+                <p>
+                Experience the artistry of French cuisine, reimagined with modern flair. Our Michelin-star chefs orchestrate every dish to create a harmonious symphony of flavors. Each visit to Les Bon Mange is an exploration of gourmet excellence.
+                </p>
             </div>
             <div className='chef-showcase'>
   
@@ -22,15 +33,28 @@ function Aboutpage(){
 
     <section className="process">
     <div className="container">
-        <h2>Our Process</h2>
-        <h3>Learn Our Day To Day</h3>
+        <h2>Meet the Residence</h2>
+        <h3>Head Chef: Pierre Leclair</h3>
+            <p>Pierre Leclair, our esteemed Head Chef, is a culinary virtuoso with a passion for crafting exquisite French cuisine. With 8 years of intensive culinary training in the heart of France, Pierre honed his skills under the mentorship of renowned chefs. His culinary journey is steeped in tradition, and his creativity knows no bounds. Inspired by the flavors of his childhood, Pierre continues to create gastronomic masterpieces that redefine French dining.</p>
+        <h3>Sous Chef: Isabelle Dubois</h3>
+            <p>Isabelle Dubois, our Sous Chef, brings a wealth of culinary expertise to The Residence. Prior to joining our team, Isabelle had the privilege of working alongside the legendary Chef Antoine Michaud. Her culinary journey began in the bustling bistros of Paris, where she learned the art of balancing flavors and textures. Isabelle's commitment to perfection and her love for the culinary arts shine through in every dish she prepares.</p>
+        <h3>Maître d'Hôtel: Jean-Pierre Martin</h3>
+            <p>Jean-Pierre Martin, our Maître d'Hôtel, is your guide to a seamless dining experience at The Residence. With a background in hospitality that spans two decades, Jean-Pierre ensures that every guest feels welcome and pampered. His attention to detail and commitment to guest satisfaction are second to none. Jean-Pierre's warm demeanor and extensive knowledge of wine pairings elevate your evening to an unforgettable level.</p>
     </div>
 
     </section>
 
-        </>
-)
-
+    {/* <nav>
+        <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/dinner-menu">Dinner Menu</Link></li>
+        <li><Link to="/guest-membership">Guest Membership</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav> */}
+    </>
+  );
 }
 
 export default Aboutpage;
