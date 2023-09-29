@@ -1,5 +1,6 @@
 import HomePage from "./structure/Homepage";
 import AboutPage from "./structure/Aboutpage";
+import Nav from "./structure/Nav";
 // import DinnerMenuPage from "./structure/DinnerMenuPage";
 // import GuestMembershipPage from "./structure/GuestMembershipPage";
 // import ContactPage from "./structure/ContactPage";
@@ -11,25 +12,7 @@ function App() {
     // <HomePage/>
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-           {/* <li>
-              <Link to="/dinner-menu">Dinner Menu</Link>
-            </li>
-        <li>
-             <Link to="/guest-membership">Guest Membership</Link>
-             </li>
-            <li>
-             <Link to="/contact">Contact</Link>
-            </li> */}
-          </ul>
-        </nav>
+       <Nav/>
        </div>
      <Routes>
         <Route exact path="/" element={<HomePage/>}/>

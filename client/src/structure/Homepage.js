@@ -1,5 +1,4 @@
 
-import siteIcon from '../assets/images/Logo.png'
 import orange from '../assets/images/orange-dishes.png'
 import fish from '../assets/images/fish-dish.png'
 import spaghetti from '../assets/images/spaghetti-dish.png'
@@ -13,16 +12,16 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    // const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!isDropdownOpen);
-    };
+    // const toggleDropdown = () => {
+    //     setDropdownOpen(!isDropdownOpen);
+    // };
     
 return(
     <>
 
-    <header>
+    {/* <header>
         <div className="logo-nav container">
 
         <div class="scrolling-words-container">
@@ -45,8 +44,8 @@ return(
                 <span class="menu"> <span class="hamburger"></span> 
                 </span>
                 <ul>
-                <li> <a href="#">Home</a> </li>
-                <li> <a href="#">About Us</a> </li>
+                <li> <Link to="/">Home</Link> </li>
+                <li> <Link to="/about">About Us</Link> </li>
                 <li> <a href="#">Dinner Menu</a> </li>
                 <li> <a href="#">Patron Perks</a> </li>
                 <li> <a href="#">Contact</a> </li>
@@ -55,7 +54,7 @@ return(
                 </nav>
             </div>
         </div>
-        </header>
+        </header> */}
 
 <section className="intro clearfix">
     <div className="showcase"></div>
