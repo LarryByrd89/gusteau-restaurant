@@ -180,20 +180,17 @@ return(
 
 <section></section>
 
-<footer>
-<div className='container'>
-<h4>Sign Up For Our Quarterly Newsletter For Updates </h4>
-    <div className="newsletter">
-        <div className='form-div'>
-        <form>
-            <input id='email' type='email' placeholder='Enter Email' required/>
-            <br/>
-            <input id="submit" type='submit' value="Sign Up"/>
-        </form>
+{/* <footer>
+    <div className="store-info container">
+                <p>Welcome</p>
+                <ul>
+                    <li>1800 S Main St, Roswell NY </li>
+                    <li>575-627-0144</li>
+                    <li>Opening Hours From 1:00pm - 10:00pm</li>
+                </ul>
             </div>
-</div>
-</div>
-</footer>
+
+</footer> */}
 
     </>
 )
