@@ -1,40 +1,29 @@
-const { Profile } = require('../models');
+const { Profile } = require("../models");
 
 const resolvers = {
   Query: {
-    profiles: async () => {
-      return Profile.find();
-    },
-
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
+    profile: async (parent, { profileData }) => {
+      return Profile.findOne({
+        userName: profileData.userName,
+        password: profileData.password,
+      });
     },
   },
 
   Mutation: {
-    addProfile: async (parent, { name }) => {
-      return Profile.create({ name });
+    addProfile: async (parent, { profileData }) => {
+      return Profile.create({ profileData });
     },
-    addSkill: async (parent, { profileId, skill }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
-        {
-          $addToSet: { skills: skill },
-        },
-        {
-          new: true,
-          runValidators: true,
-        }
-      );
-    },
+
     removeProfile: async (parent, { profileId }) => {
       return Profile.findOneAndDelete({ _id: profileId });
     },
-    removeSkill: async (parent, { profileId, skill }) => {
+
+    updateMemberType: async (parent, { profileId, memberType }) => {
       return Profile.findOneAndUpdate(
         { _id: profileId },
-        { $pull: { skills: skill } },
-        { new: true }
+        { $set: { memberType: memberType } },
+        { runValidators: true, new: true }
       );
     },
   },

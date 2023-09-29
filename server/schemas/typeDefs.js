@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Profile {
@@ -12,8 +12,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    profiles: [Profile]
-    profile(profileId: ID!): Profile
+    profile(userName: String!, password: String!): Profile
   }
 
   type Mutation {
@@ -26,13 +25,9 @@ const typeDefs = gql`
       memberType: String!
     ): Profile
 
-    updateMemberType(
-      profileId: ID!
-      memberType: String!
-    ): Profile
+    updateMemberType(profileId: ID!, memberType: String!): Profile
     removeProfile(profileId: ID!): Profile
   }
 `;
-
 
 module.exports = typeDefs;
