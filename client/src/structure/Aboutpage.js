@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 function Aboutpage(){
@@ -45,7 +44,7 @@ function Aboutpage(){
 
     </section>
 
-    <nav>
+    {/* <nav>
         <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About Us</Link></li>
@@ -53,7 +52,7 @@ function Aboutpage(){
         <li><Link to="/guest-membership">Guest Membership</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         </ul>
-      </nav>
+      </nav> */}
     </>
   );
 }

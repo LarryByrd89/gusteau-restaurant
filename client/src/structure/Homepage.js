@@ -179,7 +179,7 @@ return(
             </section>
 
 
-<footer>
+{/* <footer>
     <div className="store-info container">
                 <p>Welcome</p>
                 <ul>
@@ -189,7 +189,7 @@ return(
                 </ul>
             </div>
 
-</footer>
+</footer> */}
 
     </>
 )
