@@ -169,26 +169,30 @@ return(
             </div>
         </div>
     </div>
+</section>
 
-<div className="secfour-header container">
+<section className="secfour-header container">
         <h2>View The Menu</h2>
         <h3>From Dinners to Desert</h3>
         <p>Look through our online menu of our selected and seasonal items. We have over <strong>40</strong> high quality dishes.  Curated, tested, and tasted from our wonderful chefs, waiters, and most importantly our wonderful patrons.</p>
-</div>
+</section>
 
-            </section>
 
+<section></section>
 
 <footer>
-    <div className="store-info container">
-                <p>Welcome</p>
-                <ul>
-                    <li>1800 S Main St, Roswell NY </li>
-                    <li>575-627-0144</li>
-                    <li>Opening Hours From 1:00pm - 10:00pm</li>
-                </ul>
+<div className='container'>
+<h4>Sign Up For Our Quarterly Newsletter For Updates </h4>
+    <div className="newsletter">
+        <div className='form-div'>
+        <form>
+            <input id='email' type='email' placeholder='Enter Email' required/>
+            <br/>
+            <input id="submit" type='submit' value="Sign Up"/>
+        </form>
             </div>
-
+</div>
+</div>
 </footer>
 
     </>

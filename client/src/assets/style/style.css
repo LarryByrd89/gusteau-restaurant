@@ -77,59 +77,14 @@ header .logo-nav .scrolling-words-box ul li {
     transform: translateY(-66.6666666667%);
   }
 }
-header .logo-nav form {
-  padding: 40px 0px 40px 0px;
-  margin-top: 50px;
-}
-header .logo-nav form #email {
-  height: 35px;
-  width: 180px;
-  padding: 4px;
-  border-radius: 6px;
-  border: 1px solid #491E0D;
-  color: #491E0D;
-  font-size: 16px;
-}
-header .logo-nav form #password {
-  margin-left: 24px;
-  height: 35px;
-  width: 200px;
-  padding: 4px;
-  border-radius: 6px;
-  border: 1px solid #491E0D;
-  color: #491E0D;
-  font-size: 16px;
-}
-header .logo-nav form #member {
-  background-color: transparent;
-  padding: 6px;
-  border: 1px dashed #491E0D;
-  border-radius: 3px;
-  float: right;
-  margin-top: 30px;
-  margin-right: 30px;
-}
-header .logo-nav form #register {
-  background-color: transparent;
-  padding: 6px;
-  border: 1px dashed #491E0D;
-  border-radius: 3px;
-  float: right;
-  margin-top: 30px;
-}
-header .logo-nav form #register:hover {
-  background-color: #491E0D;
-  color: aliceblue;
-}
-header .logo-nav form #member:hover {
-  background-color: #491E0D;
-  color: aliceblue;
-}
 header .logo-nav .logo {
   position: absolute;
   left: 43%;
   top: 23px;
   z-index: 10;
+}
+header .logo-nav nav {
+  overflow-y: hidden;
 }
 header .logo-nav nav *, header .logo-nav nav *:before, header .logo-nav nav *:after {
   box-sizing: border-box;
@@ -166,7 +121,7 @@ header .logo-nav nav label .hamburger:after, header .logo-nav nav label .hamburg
   width: 100%;
   height: 100%;
   background-color: #491E0D;
-  border-radius: 3px;
+  border-radius: 13px;
 }
 header .logo-nav nav label .hamburger:before {
   top: -10px;
@@ -178,8 +133,8 @@ header .logo-nav nav label input {
   display: none;
 }
 header .logo-nav nav label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #FCF6F6, 0 0 0 100vh #FFF;
-  border-radius: 0;
+  box-shadow: 0 0 0 100vw hwb(17 5% 71%), 0 0 0 100vh aliceblue;
+  border-radius: 13px;
 }
 header .logo-nav nav label input:checked + .menu .hamburger {
   transform: rotate(45deg);
@@ -210,8 +165,9 @@ header .logo-nav nav label li {
 header .logo-nav nav label a {
   margin-bottom: 1em;
   display: block;
-  color: #f38630;
+  color: aliceblue;
   text-decoration: none;
+  font-size: 28px;
 }
 
 .showcase {
@@ -414,88 +370,112 @@ header .logo-nav nav label a {
   height: 200px;
   width: 250px;
 }
-.section-four .secfour-header {
+
+.secfour-header {
   color: #491E0D;
   margin-top: 60px;
   margin-bottom: 200px;
   text-align: center;
 }
-.section-four h2 {
+
+h2 {
   font-size: 38px;
   padding-bottom: 20px;
 }
-.section-four h3 {
+
+h3 {
   font-size: 32px;
   padding-bottom: 18px;
 }
-.section-four p {
+
+p {
   font-size: 26px;
   font-weight: 300;
 }
 
-.about-showcase {
+.about {
   display: flex;
 }
-.about-showcase .description {
+.about .description {
   padding-top: 80px;
-  padding-left: 40px;
   width: 50%;
 }
-.about-showcase .description h1 {
+.about .description h1 {
   font-size: 48px;
 }
-.about-showcase .description h2 {
+.about .description h2 {
   margin-top: 22px;
   margin-bottom: 40px;
   font-size: 38px;
 }
-.about-showcase .description p {
+.about .description p {
   padding-top: 10px;
   font-size: 22px;
   width: 85%;
   font-weight: 300;
 }
-.about-showcase .chef-showcase {
-  background-image: url(../images/headchef.jpg);
+.about .about-showcase {
+  background-image: url(../images/pexels-rachel-claire-4819658.jpg);
   width: 50%;
   height: 670px;
   background-size: cover;
-  --mask: linear-gradient(to right,
+  --mask: linear-gradient(to left,
     rgba(0,0,0, 1) 0, rgba(0,0,0, 1) 55%,
     rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
   ) 100% 50% / 100% 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
-  transform: scaleX(-1);
-}
-.about-showcase .process h2 {
-  font-size: 38px;
-}
-.about-showcase .process h3 {
-  font-size: 32px;
+  border-bottom-left-radius: 42px;
+  border-bottom-right-radius: 22px;
 }
 
-.member-type #feedback {
-  font-size: 1.4em;
+.staff {
+  margin-top: 340px;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
-.member-type #selectable .ui-selecting {
-  background: #FECA40;
+.staff .gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
 }
-.member-type #selectable .ui-selected {
-  background: #F39814;
-  color: white;
+.staff .item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
 }
-.member-type #selectable {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 60%;
+.staff .item:hover {
+  flex: 7;
 }
-.member-type #selectable li {
-  margin: 3px;
-  padding: 0.4em;
-  font-size: 1.4em;
-  height: 18px;
+.staff .item-1 {
+  background-image: url("https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80");
+}
+.staff .item-2 {
+  background-image: url("https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80");
+}
+.staff .item-3 {
+  background-image: url("https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80");
+}
+.staff .item-4 {
+  background-image: url("https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80");
+}
+.staff .item-5 {
+  background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80");
+}
+.staff .social {
+  position: absolute;
+  right: 35px;
+  bottom: 0;
+}
+.staff .social img {
+  display: block;
+  width: 32px;
 }
 
 footer {
@@ -504,11 +484,42 @@ footer {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-footer ul {
-  margin-top: 50px;
+footer h4 {
+  font-size: 28px;
+  margin-top: 40px;
 }
-footer li {
-  list-style: none;
+footer .newsletter {
+  display: flex;
+}
+footer .newsletter form {
+  margin-top: 40px;
+}
+footer .newsletter form .form-div {
+  border-right: 5px solid #491E0D;
+}
+footer .newsletter form input:focus {
+  outline: none;
+}
+footer .newsletter form #email {
+  border-radius: 4px;
+  border: 1px solid #491E0D;
+  height: 40px;
+  width: 440px;
+  padding: 8px;
+  font-size: 22px;
+}
+footer .newsletter form #submit {
+  border: 1px dashed #491E0D;
+  font-size: 22px;
+  margin-top: 40px;
+  width: 120px;
+  padding: 12px;
+  border-radius: 9px;
+}
+footer .newsletter form #submit:hover {
+  background-color: #491E0D;
+  color: aliceblue;
 }/*# sourceMappingURL=style.css.map */
-
