@@ -2,17 +2,46 @@ const { Profile } = require("../models");
 
 const resolvers = {
   Query: {
-    profile: async (parent, { profileData }) => {
+    profile: async (parent, { profileId }) => {
       return Profile.findOne({
-        userName: profileData.userName,
-        password: profileData.password,
+        _id: profileId,
       });
     },
   },
 
   Mutation: {
-    addProfile: async (parent, { profileData }) => {
-      return Profile.create({ profileData });
+    addProfile: async (
+      parent,
+      { userName, password, email, firstName, lastName, memberType }
+    ) => {
+      const profile = new Profile({
+        userName: userName,
+        password: password,
+        email: email,
+        firstName: firstName,
+        lastName: lastName,
+        memberType: memberType,
+      });
+      await profile.save();
+      return profile;
+    },
+
+    login: async (parent, { userName, password }) => {
+      const profile = await Profile.findOne({ userName });
+
+      if (!profile) {
+        throw new AuthenticationError("No profile with this email found!");
+      }
+
+      const correctPw = await profile.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError("Incorrect password!");
+      }
+
+      // const token = signToken(profile);
+      // return { token, profile };
+      return profile;
     },
 
     removeProfile: async (parent, { profileId }) => {
@@ -20,11 +49,12 @@ const resolvers = {
     },
 
     updateMemberType: async (parent, { profileId, memberType }) => {
-      return Profile.findOneAndUpdate(
+      const updatedProfile = await Profile.findOneAndUpdate(
         { _id: profileId },
-        { $set: { memberType: memberType } },
+        { ...(memberType && { memberType }) },
         { runValidators: true, new: true }
       );
+      return updatedProfile;
     },
   },
 };
