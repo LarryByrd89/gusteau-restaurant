@@ -169,15 +169,16 @@ return(
             </div>
         </div>
     </div>
+</section>
 
-<div className="secfour-header container">
+<section className="secfour-header container">
         <h2>View The Menu</h2>
         <h3>From Dinners to Desert</h3>
         <p>Look through our online menu of our selected and seasonal items. We have over <strong>40</strong> high quality dishes.  Curated, tested, and tasted from our wonderful chefs, waiters, and most importantly our wonderful patrons.</p>
-</div>
+</section>
 
-            </section>
 
+<section></section>
 
 {/* <footer>
     <div className="store-info container">

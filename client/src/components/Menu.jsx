@@ -15,16 +15,10 @@ const Menu = () => {
             <div className='menu-scroll'>
                 <img className='alt-menu' src={menu} alt=''/>
             </div>
-            {/* <div id="menu__items">
-                <img className='menu__image' src={menuCover} alt="menu page cover" />
-                <img className='menu__image' src={menu1} alt="menu page 1" />
-                <img className='menu__image' src={menu2} alt="menu page 2" />
-                <div id="downloadMenu__link">
-            </div>
-            </div> */}
+
         </section>
 
     )
-}
+    }
 
-export default Menu
+export default Menu;
