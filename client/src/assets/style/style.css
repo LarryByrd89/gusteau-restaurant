@@ -33,7 +33,7 @@ h1, h2, h3, h4 {
   font-family: "Gloock", serif;
 }
 
-p, li, input {
+p, li, a, input {
   font-family: "Jost", sans-serif;
 }
 
@@ -50,7 +50,7 @@ header .logo-nav .scrolling-words-container {
   align-items: center;
   font-size: 1.7rem;
   font-weight: 600;
-  margin-top: 100px;
+  margin-top: 140px;
 }
 header .logo-nav .scrolling-words-box {
   height: 3rem;
@@ -429,54 +429,44 @@ p {
   border-bottom-right-radius: 22px;
 }
 
-.staff {
-  margin-top: 340px;
-  box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-}
-.staff .gallery-wrap {
+#menu {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 70vh;
-  padding-bottom: 200px;
 }
-.staff .item {
-  flex: 1;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: none;
-  transition: flex 0.8s ease;
+#menu .menu-header {
+  width: 50%;
+  text-align: center;
 }
-.staff .item:hover {
-  flex: 7;
+#menu .menu-header h1 {
+  font-size: 48px;
 }
-.staff .item-1 {
-  background-image: url("https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80");
+#menu .menu-header h2 {
+  margin-top: 30px;
+  font-size: 38px;
+  padding-bottom: 40px;
 }
-.staff .item-2 {
-  background-image: url("https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80");
+#menu .menu-header p {
+  font-size: 22px;
+  font-weight: 300;
+  width: 95%;
+  padding-bottom: 50px;
 }
-.staff .item-3 {
-  background-image: url("https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80");
+#menu .menu-header #menu-download {
+  color: #491E0D;
+  font-size: 27px;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 5px;
+  transition: 0.52s;
 }
-.staff .item-4 {
-  background-image: url("https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80");
+#menu .menu-header #menu-download:hover {
+  color: aliceblue;
+  background-color: #491E0D;
+  border-radius: 9px;
+  transition: 0.52s;
 }
-.staff .item-5 {
-  background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80");
-}
-.staff .social {
-  position: absolute;
-  right: 35px;
-  bottom: 0;
-}
-.staff .social img {
-  display: block;
-  width: 32px;
+#menu .menu-scroll {
+  height: 780px;
+  overflow-y: scroll;
 }
 
 footer {
