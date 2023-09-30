@@ -2,10 +2,9 @@ const { Profile } = require("../models");
 
 const resolvers = {
   Query: {
-    profile: async (parent, { userName, password }) => {
+    profile: async (parent, { profileId }) => {
       return Profile.findOne({
-        userName: userName,
-        password: profileData.password,
+        _id: profileId,
       });
     },
   },
@@ -15,15 +14,15 @@ const resolvers = {
       parent,
       { userName, password, email, firstName, lastName, memberType }
     ) => {
-      const profile = new Profile(
-        userName,
-        password,
-        email,
-        firstName,
-        lastName,
-        memberType
-      );
-      await profile.create();
+      const profile = new Profile({
+        userName: userName,
+        password: password,
+        email: email,
+        firstName: firstName,
+        lastName: lastName,
+        memberType: memberType,
+      });
+      await profile.save();
       return profile;
     },
 
@@ -50,11 +49,12 @@ const resolvers = {
     },
 
     updateMemberType: async (parent, { profileId, memberType }) => {
-      return Profile.findOneAndUpdate(
+      const updatedProfile = await Profile.findOneAndUpdate(
         { _id: profileId },
-        { $set: { memberType: memberType } },
+        { ...(memberType && { memberType }) },
         { runValidators: true, new: true }
       );
+      return updatedProfile;
     },
   },
 };
