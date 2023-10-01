@@ -81,7 +81,7 @@ npm run develop
 - Home Page
 
 ![Alt text](client/src/assets/images/readme/Home.png)
-
+![Alt text](client/src/assets/images/readme/Home2.png)
 - About page
 
 ![Alt text](client/src/assets/images/readme/About.png)
@@ -115,3 +115,9 @@ npm run develop
 [guillermomuro00](https://pixabay.com/users/guillermomuro00-12807863/)
 
 [Rabbit Logo](https://pixabay.com/vectors/rabbit-cooking-food-kitchen-animal-41119/)
+
+[StackOverflowv- Hamburger React JS](https://stackoverflow.com/questions/70310465/how-can-i-close-my-hamburger-menu-when-clicking-on-a-link-using-react-js-using)
+
+[CodePen](https://codepen.io/)
+
+[npmjs.com](https://docs.npmjs.com/)
