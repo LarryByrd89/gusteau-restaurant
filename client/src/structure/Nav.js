@@ -8,42 +8,53 @@ function Nav(){
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
     };
+
+    const closeDropdown = () => {
+        setDropdownOpen(false);
+      };
+
+      const handleLinkClick = () => {
+        console.log("Link clicked");
+        closeDropdown();
+      };
+
     return(
-        <>
- <header>
-<div className="logo-nav container">
+    <>
+        <header>
+            <div className="logo-nav container">
+                <div class="scrolling-words-container">
+                    <div class="scrolling-words-box">
+                        <ul>
+                            <li>1800 S Main St, Roswell NY </li>
+                            <li>575-627-0144</li>
+                            <li>Opening Hours From 1:00pm - 10:00pm</li>
+                        </ul>
+                    </div>
+                </div>
 
-<div class="scrolling-words-container">
-<div class="scrolling-words-box">
-<ul>
-<li>1800 S Main St, Roswell NY </li>
-<li>575-627-0144</li>
-<li>Opening Hours From 1:00pm - 10:00pm</li>
-</ul>
-</div>
-</div>
-
-    <div className="logo">
-        <img src={siteIcon} alt="Le Bon Manges"/>
-    </div>
-    <div className="nav">
-        <nav>
-        <label>
-        <input type="checkbox"/>
-        <span class="menu"> <span class="hamburger"></span> 
-        </span>
-        <ul>
-        <li> <Link to="/">Home</Link> </li>
-        <li> <Link to="/about">About Us</Link> </li>
-        <li> <Link to="/menu">Menu</Link> </li>
-        <li> <Link to="/guest-membership">Guest Membership</Link> </li>
-        <li> <Link to="/contact">Contact</Link> </li>
-        </ul>
-        </label>
-        </nav>
-    </div>
-</div>
-</header>
+                <div className="logo">
+                    <img src={siteIcon} alt="Le Bon Manges"/>
+                </div>
+                
+                <div className="nav">
+                    <nav>
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="menu">
+                                <span class="hamburger"></span> 
+                            </span>
+                            <ul>
+                                <li> <Link to="/" onClick={handleLinkClick}>Home</Link> </li>
+                                <li> <Link to="/about" onClick={handleLinkClick}>About Us</Link> </li>
+                                <li> <Link to="/menu" onClick={handleLinkClick}>Menu</Link> </li>
+                                <li> <Link to="/guest-membership" onClick={handleLinkClick}>Guest Membership</Link> </li>
+                                <li> <Link to="/contact" onClick={handleLinkClick}>Contact</Link> </li>
+                            </ul>
+                        </label>
+                    </nav>
+                </div>
+            </div>
+        </header>
     </>
   );
 }

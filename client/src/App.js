@@ -13,7 +13,7 @@ import client from "./utils/client";
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
+      <Router scrollRestoration="auto">
         <div>
           <Nav />
           <Routes>
