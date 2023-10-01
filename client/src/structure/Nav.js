@@ -36,7 +36,7 @@ function Nav(){
         <li> <Link to="/">Home</Link> </li>
         <li> <Link to="/about">About Us</Link> </li>
         <li> <Link to="/menu">Menu</Link> </li>
-        <li> <Link to="/guest-membership">Guest Membership</Link> </li>
+        <li> <Link to="/membership">Guest Membership</Link> </li>
         <li> <Link to="/contact">Contact</Link> </li>
         </ul>
         </label>

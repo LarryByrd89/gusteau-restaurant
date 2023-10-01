@@ -1,28 +1,44 @@
-// import React, { Component } from 'react'
-// import $ from 'jquery'
+function Membership(){
+    return (
 
-// export default class Membership extends Component {
-//   jQuerycode = () => {
-//  $( function() {
-//     $( "#selectable" ).selectable();
-//   });
-//   }
-//   componentDidMount(){
-//     this.jQuerycode()
-//   }
-//   render() {
-//     return (
-//         <ol id="selectable">
-//         <li class="ui-widget-content">Item 1</li>
-//         <li class="ui-widget-content">Item 2</li>
-//         <li class="ui-widget-content">Item 3</li>
-//         <li class="ui-widget-content">Item 4</li>
-//         <li class="ui-widget-content">Item 5</li>
-//         <li class="ui-widget-content">Item 6</li>
-//         <li class="ui-widget-content">Item 7</li>
-//       </ol>
-//     )
-//   }
-// }
+      <>
+        <section className="login-member container">
 
-// export default Me
+<div class="wrapper">
+  <div class="tabs">
+    <div class="tab">
+      <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch"/>
+      <label for="tab-1" class="tab-label">Login in</label>
+      <div class="tab-content">
+          <form>
+            <input type="email" id="email-register" placeholder="Enter Email" required/>
+            <br/>
+            <input type="password" id="password-register" placeholder="Enter Password" required />
+            <br/>
+            <input type="name" id="name-register" placeholder="Enter Name" required/>
+            <br/>
+            <input type="submit" id="register-submit" placeholder="Register"/>
+          </form>
+         </div>
+    </div>
+    <div class="tab">
+      <input type="radio" name="css-tabs" id="tab-2" class="tab-switch"/>
+      <label for="tab-2" class="tab-label">Tab Two</label>
+      <div class="tab-content">
+      <form>
+            <input type="email" id="email-login" placeholder="Enter Email" required/>
+            <input type="password" id="password-register" placeholder="Enter Password" required />
+            <input type="submit" id="register-submit"/>
+          </form>  
+      </div>
+    </div>
+  </div>
+
+</div>
+      </section>
+        </>
+    )
+}
+
+
+export default Membership;
