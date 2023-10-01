@@ -13,8 +13,8 @@ function Nav(){
  <header>
 <div className="logo-nav container">
 
-<div class="scrolling-words-container">
-<div class="scrolling-words-box">
+<div className="scrolling-words-container">
+<div className="scrolling-words-box">
 <ul>
 <li>1800 S Main St, Roswell NY </li>
 <li>575-627-0144</li>
@@ -30,13 +30,13 @@ function Nav(){
         <nav>
         <label>
         <input type="checkbox"/>
-        <span class="menu"> <span class="hamburger"></span> 
+        <span className="menu"> <span className="hamburger"></span> 
         </span>
         <ul>
         <li> <Link to="/">Home</Link> </li>
         <li> <Link to="/about">About Us</Link> </li>
         <li> <Link to="/menu">Menu</Link> </li>
-        <li> <Link to="/membership">Guest Membership</Link> </li>
+        <li> <Link to="/membership">Patron Perks</Link> </li>
         <li> <Link to="/contact">Contact</Link> </li>
         </ul>
         </label>

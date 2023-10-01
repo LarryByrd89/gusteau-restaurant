@@ -469,41 +469,109 @@ p {
 .staff .item-5 {
   background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80");
 }
-.staff .social {
-  position: absolute;
-  right: 35px;
-  bottom: 0;
+
+#menu {
+  display: flex;
 }
-.staff .social img {
-  display: block;
-  width: 32px;
+#menu .menu-header {
+  width: 50%;
+  text-align: center;
+}
+#menu .menu-header h1 {
+  font-size: 48px;
+}
+#menu .menu-header h2 {
+  margin-top: 30px;
+  font-size: 38px;
+  padding-bottom: 40px;
+}
+#menu .menu-header p {
+  font-size: 22px;
+  font-weight: 300;
+  width: 95%;
+  padding-bottom: 50px;
+}
+#menu .menu-header #menu-download {
+  color: #491E0D;
+  font-family: "Jost", sans-serif;
+  font-size: 27px;
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 5px;
+  transition: 0.52s;
+}
+#menu .menu-header #menu-download:hover {
+  color: aliceblue;
+  background-color: #491E0D;
+  border-radius: 9px;
+  transition: 0.52s;
+}
+#menu .menu-scroll {
+  height: 780px;
+  overflow-y: scroll;
+  border-left: 1px dashed #491E0D;
 }
 
-.login .wrapper {
-  width: 100%;
-  margin: 0 auto;
+.member-header {
+  background-color: #491E0D;
+  padding-top: 200px;
+  padding-bottom: 80px;
 }
-.login .tabs {
+.member-header h1 {
+  font-size: 48px;
+  color: aliceblue;
+  text-align: center;
+}
+.member-header h2 {
+  font-size: 38px;
+  color: aliceblue;
+  text-align: center;
+}
+.member-header p {
+  color: aliceblue;
+  font-size: 22px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.point-opacity {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.memberpage {
+  background-color: #491E0D;
+  display: flex;
+  padding-top: 120px;
+  padding-bottom: 400px;
+}
+.memberpage .wrapper {
+  height: 500px;
+  width: 30%;
+}
+.memberpage .tabs {
   position: relative;
-  margin: 3rem 0;
   height: 14.75rem;
 }
-.login .tabs::before,
-.login .tabs::after {
+.memberpage .tabs::before,
+.memberpage .tabs::after {
   content: "";
   display: table;
 }
-.login .tabs::after {
+.memberpage .tabs::after {
   clear: both;
 }
-.login .tab {
+.memberpage .tab {
   float: left;
   color: aliceblue;
 }
-.login .tab-switch {
+.memberpage .tab-switch {
   display: none;
 }
-.login .tab-label {
+.memberpage .tab-label {
   display: block;
   line-height: 2.75em;
   height: 3em;
@@ -516,35 +584,148 @@ p {
   top: 0;
   transition: all 0.25s;
 }
-.login .tab-label:hover {
+.memberpage .tab-label:hover {
   top: -0.25rem;
   transition: top 0.25s;
 }
-.login .tab-content {
+.memberpage .tab-content {
   height: 12rem;
   position: absolute;
   z-index: 1;
   top: 2.75em;
   left: 0;
-  padding: 1.618rem;
-  color: #2c3e50;
+  padding-top: 1.618rem;
   opacity: 0;
   transition: all 0.35s;
 }
-.login .tab-switch:checked + .tab-label {
-  color: #2c3e50;
+.memberpage .tab-switch:checked + .tab-label {
+  color: aliceblue;
   border-bottom: 0;
   transition: all 0.35s;
   z-index: 1;
   top: -0.0625rem;
 }
-.login .tab-switch:checked + label + .tab-content {
+.memberpage .tab-switch:checked + label + .tab-content {
   z-index: 2;
   opacity: 1;
   transition: all 0.35s;
 }
-.login form {
+.memberpage form {
   display: block;
+}
+.memberpage form #email-register {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+}
+.memberpage form #password-register {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.memberpage form #name-register {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.memberpage form #register-submit {
+  margin-top: 25px;
+  width: 120px;
+  padding: 3px;
+  font-size: 15px;
+  background-color: aliceblue;
+  border-radius: 4px;
+  border: 1px dashed #491E0D;
+  color: #491E0D;
+  transition: 0.52s;
+}
+.memberpage form #register-submit:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+  transition: 0.52s;
+}
+.memberpage form #email-login {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+}
+.memberpage form #password-login {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.memberpage form #login {
+  margin-top: 25px;
+  width: 120px;
+  padding: 3px;
+  font-size: 15px;
+  background-color: aliceblue;
+  border-radius: 4px;
+  border: 1px dashed #491E0D;
+  color: #491E0D;
+  transition: 0.52s;
+}
+.memberpage form #login:hover {
+  color: aliceblue;
+  background-color: #491E0D;
+  transition: 0.52s;
+}
+.memberpage .member-type {
+  color: aliceblue;
+  width: 70%;
+  display: flex;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+}
+.memberpage .member-type .wine-card {
+  background-image: url(../images/edge2edge-media-aaSmG4bj25I-unsplash.jpg);
+  background-size: cover;
+  width: 45%;
+  height: 500px;
+  border-radius: 12px;
+  padding: 0px 13px;
+}
+.memberpage .member-type .wine-card p {
+  font-size: 24px;
+}
+.memberpage .member-type .desert-card {
+  background-image: url(../images/jordane-mathieu-9trWI5ULtJQ-unsplash.jpg);
+  background-size: cover;
+  width: 45%;
+  height: 500px;
+  border-radius: 12px;
+  padding: 0px 13px;
+  margin-left: 10%;
+  background-position: center left;
 }
 
 footer {
