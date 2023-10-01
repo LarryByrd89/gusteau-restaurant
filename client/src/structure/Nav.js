@@ -1,65 +1,73 @@
 import React, { useState } from 'react';
-import siteIcon from '../assets/images/Logo.png'
+import siteIcon from '../assets/images/Logo.png';
 import { Link } from 'react-router-dom';
 
-function Nav(){
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+function Nav() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!isDropdownOpen);
-    };
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
-    const closeDropdown = () => {
-        setDropdownOpen(false);
-      };
-
-      const handleLinkClick = () => {
-        console.log("Link clicked");
-        closeDropdown();
-      };
-
-    return(
+  return (
     <>
-        <header>
-            <div className="logo-nav container">
-                <div class="scrolling-words-container">
-                    <div class="scrolling-words-box">
-                        <ul>
-                            <li>1800 S Main St, Roswell NY </li>
-                            <li>575-627-0144</li>
-                            <li>Opening Hours From 1:00pm - 10:00pm</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="logo">
-                    <img src={siteIcon} alt="Le Bon Manges"/>
-                </div>
-                
-                <div className="nav">
-                    <nav>
-                        <label>
-                            <input type="checkbox"/>
-                            <span class="menu">
-                                <span class="hamburger"></span> 
-                            </span>
-                            <ul>
-                                <li> <Link to="/" onClick={handleLinkClick}>Home</Link> </li>
-                                <li> <Link to="/about" onClick={handleLinkClick}>About Us</Link> </li>
-                                <li> <Link to="/menu" onClick={handleLinkClick}>Menu</Link> </li>
-                                <li> <Link to="/guest-membership" onClick={handleLinkClick}>Guest Membership</Link> </li>
-                                <li> <Link to="/contact" onClick={handleLinkClick}>Contact</Link> </li>
-                            </ul>
-                        </label>
-                    </nav>
-                </div>
+      <header>
+        <div className="logo-nav container">
+          <div className="scrolling-words-container">
+            <div className="scrolling-words-box">
+              <ul>
+                <li>1800 S Main St, Roswell NY </li>
+                <li>575-627-0144</li>
+                <li>Opening Hours From 1:00pm - 10:00pm</li>
+              </ul>
             </div>
-        </header>
+          </div>
+
+          <div className="logo">
+            <img src={siteIcon} alt="Le Bon Manges" />
+          </div>
+
+          <div className="nav">
+            <nav>
+              <label>
+                <input type="checkbox" checked={isMenuOpen} onChange={() => setMenuOpen(!isMenuOpen)} />
+                <span className="menu">
+                  <span className="hamburger"></span>
+                </span>
+                <ul>
+                  <li>
+                    <Link to="/" onClick={closeMenu}>
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/about" onClick={closeMenu}>
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/menu" onClick={closeMenu}>
+                      Menu
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/guest-membership" onClick={closeMenu}>
+                      Guest Membership
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/contact" onClick={closeMenu}>
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </label>
+            </nav>
+          </div>
+        </div>
+      </header>
     </>
   );
 }
 
 export default Nav;
-
-
-
