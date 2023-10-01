@@ -78,7 +78,21 @@ npm run develop
 
 ## Screenshots
 
-Include screenshots or images that showcase your project's UI or functionality.
+- Home Page
+
+![Alt text](client/src/assets/images/readme/Home.png)
+
+- About page
+
+![Alt text](client/src/assets/images/readme/About.png)
+
+- Menu Page
+
+![Alt text](client/src/assets/images/readme/Menu.png)
+
+- Newsletter Footer
+
+![Alt text](client/src/assets/images/readme/Footer.png)
 
 ## Asset Credits
 
