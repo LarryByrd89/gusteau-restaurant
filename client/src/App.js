@@ -1,7 +1,7 @@
 import HomePage from "./structure/Homepage";
 import AboutPage from "./structure/Aboutpage";
 import Membership from "./structure/Membership";
-import Contact from "./components/Contact"
+import Contact from "./components/Contact";
 import Nav from "./structure/Nav";
 import Menu from "./components/Menu";
 import Footer from "./structure/Footer/Footer";
@@ -22,8 +22,8 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/reservation" element={<Reservation />} />
-            <Route path="/guest-membership" element={<Membership/>} />
-            <Route path="/contact" element={<Contact/>} />
+            <Route path="/guest-membership" element={<Membership />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </div>
