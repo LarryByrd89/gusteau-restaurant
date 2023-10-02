@@ -741,8 +741,8 @@ footer {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 footer h4 {
   font-size: 28px;
@@ -873,3 +873,19 @@ textarea {
   }
 }
 
+/* FOOTER NAV */
+
+.footer-nav {
+  display: inline-block;
+  padding: 30px;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.footer-links {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
+}
