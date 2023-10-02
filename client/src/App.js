@@ -4,8 +4,9 @@ import Membership from "./structure/Membership";
 import Contact from "./components/Contact";
 import Nav from "./structure/Nav";
 import Menu from "./components/Menu";
-import Footer from "./structure/Footer/Footer";
+import Footer from "./structure/Footer";
 import Reservation from "./components/Reservation";
+import GuestMembershipPage from "./structure/Membership";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import { ApolloProvider } from "@apollo/client";
@@ -24,8 +25,6 @@ function App() {
             <Route path="/guest-membership" element={<Membership />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/reservation" element={<Reservation />} />
-            <Route path="/guest-membership" element={<Membership />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </div>
