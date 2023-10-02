@@ -29,15 +29,15 @@ function Aboutpage(){
     <section className="staff">
     <div className="container">
 
-    <div class="container">
+    <div className="container">
 
 
-  <div class="gallery-wrap">
-    <div class="item item-1"></div>
-    <div class="item item-2"></div>
-    <div class="item item-3"></div>
-    <div class="item item-4"></div>
-    <div class="item item-5"></div>
+  <div className="gallery-wrap">
+    <div className="item item-1"></div>
+    <div className="item item-2"></div>
+    <div className="item item-3"></div>
+    <div className="item item-4"></div>
+    <div className="item item-5"></div>
   </div>
  </div>
 
