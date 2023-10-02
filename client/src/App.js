@@ -6,14 +6,13 @@ import Footer from "./structure/Footer";
 // import Contact from "./components/Contact";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
-
 import { ApolloProvider } from "@apollo/client";
 import client from "./utils/client";
 
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
+      <Router scrollRestoration="auto">
         <div>
           <Nav />
           <Routes>
