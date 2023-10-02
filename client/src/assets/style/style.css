@@ -535,9 +535,9 @@ p {
 }
 
 .point-opacity {
+  -moz-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   pointer-events: none;
   opacity: 0.2;
 }

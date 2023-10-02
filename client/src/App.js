@@ -5,7 +5,6 @@ import Menu from "./components/Menu";
 import Membership from "./structure/Membership";
 import Nav from "./structure/Nav";
 import Footer from "./structure/Footer";
-import Contact from "./components/Contact";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from "react";
 
