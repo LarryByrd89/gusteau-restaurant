@@ -12,6 +12,7 @@ const Menu = () => {
     
                 <p>We Try To Serve New Items Now And Again. We Thrive For New Experiences For Our Chefs And Patrons To Try. <br/>
                     Scroll Down The Menu To See Your Dining Options.
+                    </p>
 
 
                 <a id="menu-download" href={menu} download="leBonMenu">Download Our Menu Here!</a>
