@@ -33,7 +33,7 @@ h1, h2, h3, h4 {
   font-family: "Gloock", serif;
 }
 
-p, li, a, input {
+p, li, input {
   font-family: "Jost", sans-serif;
 }
 
@@ -50,7 +50,7 @@ header .logo-nav .scrolling-words-container {
   align-items: center;
   font-size: 1.7rem;
   font-weight: 600;
-  margin-top: 140px;
+  margin-top: 100px;
 }
 header .logo-nav .scrolling-words-box {
   height: 3rem;
@@ -429,6 +429,47 @@ p {
   border-bottom-right-radius: 22px;
 }
 
+.staff {
+  margin-top: 340px;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.staff .gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  padding-bottom: 200px;
+}
+.staff .item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+.staff .item:hover {
+  flex: 7;
+}
+.staff .item-1 {
+  background-image: url("https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80");
+}
+.staff .item-2 {
+  background-image: url("https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80");
+}
+.staff .item-3 {
+  background-image: url("https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80");
+}
+.staff .item-4 {
+  background-image: url("https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80");
+}
+.staff .item-5 {
+  background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80");
+}
+
 #menu {
   display: flex;
 }
@@ -452,6 +493,7 @@ p {
 }
 #menu .menu-header #menu-download {
   color: #491E0D;
+  font-family: "Jost", sans-serif;
   font-size: 27px;
   text-decoration: none;
   padding: 9px;
@@ -467,6 +509,230 @@ p {
 #menu .menu-scroll {
   height: 780px;
   overflow-y: scroll;
+  border-left: 1px dashed #491E0D;
+}
+
+.member-header {
+  background-color: #491E0D;
+  padding-top: 200px;
+  padding-bottom: 80px;
+}
+.member-header h1 {
+  font-size: 48px;
+  color: aliceblue;
+  text-align: center;
+}
+.member-header h2 {
+  font-size: 38px;
+  color: aliceblue;
+  text-align: center;
+}
+.member-header p {
+  color: aliceblue;
+  font-size: 22px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.point-opacity {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.memberpage {
+  background-color: #491E0D;
+  display: flex;
+  padding-top: 120px;
+  padding-bottom: 400px;
+}
+.memberpage .wrapper {
+  display: grid;
+  height: 500px;
+  width: 30%;
+  padding: 30px;
+}
+.memberpage .tabs {
+  position: relative;
+  height: 14.75rem;
+}
+.memberpage .tabs::before,
+.memberpage .tabs::after {
+  content: "";
+  display: table;
+}
+.memberpage .tabs::after {
+  clear: both;
+}
+.memberpage .tab {
+  float: left;
+  color: aliceblue;
+  border: 1px solid white;
+}
+.memberpage .tab-switch {
+  display: none;
+}
+.memberpage .tab-label {
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1.618em;
+  background: #491E0D;
+  border-right: 0.125rem solid #491E0D;
+  color: aliceblue;
+  font-family: "Jost", serif;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+}
+.memberpage .tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+.memberpage .tab-content {
+  height: 12rem;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding-top: 1.618rem;
+  opacity: 0;
+  transition: all 0.35s;
+}
+.memberpage .tab-switch:checked + .tab-label {
+  color: aliceblue;
+  border-bottom: 0;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+.memberpage .tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
+.memberpage form {
+  background-color: aliceblue;
+  display: block;
+  border: 1px solid aliceblue;
+  padding: 10px;
+  border-radius: 1rem;
+}
+.memberpage form #email-register {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+}
+.memberpage form #password-register {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.memberpage form #name-register {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.memberpage form #register-submit {
+  margin-top: 25px;
+  width: 120px;
+  padding: 3px;
+  font-size: 15px;
+  background-color: aliceblue;
+  border-radius: 4px;
+  border: 1px dashed #491E0D;
+  color: #491E0D;
+  transition: 0.52s;
+}
+.memberpage form #register-submit:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+  transition: 0.52s;
+}
+.memberpage form #email-login {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+}
+.memberpage form #password-login {
+  width: 300px;
+  height: 40px;
+  font-size: 24px;
+  padding: 8px;
+  outline: none;
+  border: 2px solid #491E0D;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.memberpage form #login {
+  margin-top: 25px;
+  width: 120px;
+  padding: 3px;
+  font-size: 15px;
+  background-color: aliceblue;
+  border-radius: 4px;
+  border: 1px dashed #491E0D;
+  color: #491E0D;
+  transition: 0.52s;
+}
+.memberpage form #login:hover {
+  color: aliceblue;
+  background-color: #491E0D;
+  transition: 0.52s;
+}
+.memberpage .member-type {
+  color: aliceblue;
+  width: 70%;
+  display: flex;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px;
+}
+.memberpage .member-type .wine-card {
+  background-image: url(../images/edge2edge-media-aaSmG4bj25I-unsplash.jpg);
+  background-size: cover;
+  width: 45%;
+  height: 500px;
+  border-radius: 12px;
+  padding: 0px 13px;
+}
+.memberpage .member-type .wine-card p {
+  font-size: 24px;
+}
+.memberpage .member-type .desert-card {
+  background-image: url(../images/jordane-mathieu-9trWI5ULtJQ-unsplash.jpg);
+  background-size: cover;
+  width: 45%;
+  height: 500px;
+  border-radius: 12px;
+  padding: 0px 13px;
+  margin-left: 10%;
+  background-position: center left;
 }
 
 footer {
@@ -475,8 +741,8 @@ footer {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 footer h4 {
   font-size: 28px;
@@ -514,3 +780,112 @@ footer .newsletter form #submit:hover {
   background-color: #491E0D;
   color: aliceblue;
 }/*# sourceMappingURL=style.css.map */
+
+/* CONTACT PAGE STYLES */
+
+#contact {
+  padding: 3rem;
+}
+
+.contactBtn {
+  border-radius: 1rem;
+  display: grid;
+  justify-content: center;
+  width: 50%;
+  background-color: aliceblue;
+}
+
+.container.contact__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+  text-align: center;
+}
+
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__options h4 {
+  padding-bottom: 1.7rem;
+}
+
+.contact__option {
+  background: aliceblue;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid black;
+  transition: var(--transition);
+  justify-content: center;
+}
+
+.contact__option:hover {
+  background: transparent;
+  border-color: white;
+}
+
+.contact__option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid white;
+  resize: none;
+  color: black;
+}
+
+/* MEDIA QUERIES (MEDIUM DEVICES) */
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+}
+
+/* MEDIA QUERIES (SMALL DEVICES) */
+
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+     width: var(--container-width-sm);
+  }
+}
+
+/* FOOTER NAV */
+
+.footer-nav {
+  display: inline-block;
+  padding: 30px;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.footer-links {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
+}
