@@ -4,6 +4,7 @@ import Nav from "./structure/Nav";
 import Menu from "./components/Menu";
 import Footer from "./structure/Footer";
 import Contact from "./components/Contact";
+import Membership from "./structure/Membership";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import { ApolloProvider } from "@apollo/client";
@@ -19,7 +20,7 @@ function App() {
             <Route exact path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/menu" element={<Menu />} />
-            {/* <Route path="/guest-membership" element={GuestMembershipPage} /> */}
+            <Route path="/guest-membership" element={<Membership />} />
             <Route path="/contact" element={<Contact/>} />
           </Routes>
           <Footer />

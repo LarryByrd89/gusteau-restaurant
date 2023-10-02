@@ -549,8 +549,10 @@ p {
   padding-bottom: 400px;
 }
 .memberpage .wrapper {
+  display: grid;
   height: 500px;
   width: 30%;
+  padding: 30px;
 }
 .memberpage .tabs {
   position: relative;
@@ -567,6 +569,7 @@ p {
 .memberpage .tab {
   float: left;
   color: aliceblue;
+  border: 1px solid white;
 }
 .memberpage .tab-switch {
   display: none;
@@ -611,7 +614,11 @@ p {
   transition: all 0.35s;
 }
 .memberpage form {
+  background-color: aliceblue;
   display: block;
+  border: 1px solid aliceblue;
+  padding: 10px;
+  border-radius: 1rem;
 }
 .memberpage form #email-register {
   width: 300px;
@@ -704,7 +711,7 @@ p {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px;
+  padding: 30px;
 }
 .memberpage .member-type .wine-card {
   background-image: url(../images/edge2edge-media-aaSmG4bj25I-unsplash.jpg);
@@ -847,7 +854,7 @@ textarea {
   background: transparent;
   border: 2px solid white;
   resize: none;
-  color: white;
+  color: black;
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
@@ -865,3 +872,4 @@ textarea {
      width: var(--container-width-sm);
   }
 }
+
