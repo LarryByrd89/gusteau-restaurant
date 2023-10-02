@@ -20,8 +20,10 @@ const Contact = () => {
   };
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
+      <h4>Get In Touch</h4>
       <h2>How To Contact Us</h2>
+      <h4>575-627-0144</h4>
+      
 
       <div className="container contact__container">
         <div className="contact__options">
@@ -37,12 +39,12 @@ const Contact = () => {
           <input type='text' name='name' placeholder='Your Full Name' required />
           <input type='email' name='email' placeholder='Your Email' required/>
           <textarea name="message" rows="7" placeholder='Your Message' required ></textarea>
-          <button type='submit' className='btn btn-primary'>Send Message</button>
+          <button type='submit' className='contactBtn btn-primary'>Send Message</button>
         </form>
 
       </div>
     </section>
   )
-}
+};
 
 export default Contact
