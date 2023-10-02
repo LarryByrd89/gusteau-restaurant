@@ -50,6 +50,9 @@ function Nav() {
                       Menu
                     </Link>
                   </li>
+                  <Link to="/reservation" onClick={closeMenu}>
+                      Make A Reservation
+                    </Link>
                   <li>
                     <Link to="/guest-membership" onClick={closeMenu}>
                       Guest Membership
