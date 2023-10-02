@@ -34,7 +34,7 @@ body{
 h1, h2, h3, h4{
   font-family: 'Gloock', serif;
 }
-p, li, a, input{
+p, li, input{
   font-family: 'Jost', sans-serif;
 }
 
@@ -52,7 +52,7 @@ header{
           align-items: center;
           font-size: 1.7rem;
           font-weight: 600; 
-          margin-top: 140px;
+          margin-top: 100px;
         }
         
         .scrolling-words-box {
@@ -558,24 +558,12 @@ p{
   background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80');
 }
 
-.social{
-  position: absolute;
-  right: 35px;
-  bottom: 0;
-  
-  img{
-    display: block;
-    width: 32px;
-  }
-}
 }
 
-<<<<<<< HEAD
-=======
+
 #menu{
   display: flex;
   
-
   .menu-header{
      width: 50%;
      text-align: center;
@@ -600,6 +588,7 @@ p{
 
      #menu-download{
       color: #491E0D;
+      font-family: 'Jost', sans-serif;
       font-size: 27px;
       text-decoration: none;
       padding: 9px;
@@ -617,10 +606,247 @@ p{
   .menu-scroll{
     height: 780px;
     overflow-y: scroll;
+    border-left: 1px dashed #491E0D;
 
   }
 }
->>>>>>> ea0885a663d8f1447dee2b5a41364ecb14b418bc
+
+.member-header{
+
+  background-color: #491E0D;
+  padding-top: 200px;
+  padding-bottom: 80px;
+
+
+  h1{
+    font-size: 48px;
+    color: aliceblue;
+    text-align: center;
+  }
+
+  h2{
+    font-size: 38px;
+    color: aliceblue;
+    text-align: center;
+  }
+
+  p {
+    color: aliceblue;
+    font-size: 22px;
+    margin-top: 18px;
+    text-align: center;
+  }
+}
+
+.point-opacity{
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.2;   
+}
+
+.memberpage{
+  background-color: #491E0D;
+  display: flex;
+  padding-top: 120px;
+  padding-bottom: 400px;
+
+
+  .wrapper {
+    height: 500px;
+    width: 30%;
+  }
+  .tabs {
+    position: relative;
+    height: 14.75rem;
+  }
+  .tabs::before,
+  .tabs::after {
+    content: "";
+    display: table;
+  }
+  .tabs::after {
+    clear: both;
+  }
+  .tab {
+    float: left;
+    color: aliceblue;
+  }
+  .tab-switch {
+    display: none;
+  }
+  .tab-label {
+    display: block;
+    line-height: 2.75em;
+    height: 3em;
+    padding: 0 1.618em;
+    background: #491E0D;
+    border-right: 0.125rem solid #491E0D;
+    color: aliceblue;
+    font-family: 'Jost', serif;
+    cursor: pointer;
+    top: 0;
+    transition: all 0.25s;
+  }
+  .tab-label:hover {
+    top: -0.25rem;
+    transition: top 0.25s;
+  }
+  .tab-content {
+    height: 12rem;
+    position: absolute;
+    z-index: 1;
+    top: 2.75em;
+    left: 0;
+    padding-top: 1.618rem;
+    opacity: 0;
+    transition: all 0.35s;
+  }
+  .tab-switch:checked + .tab-label {
+
+    color: aliceblue;
+    border-bottom: 0;
+    transition: all 0.35s;
+    z-index: 1;
+    top: -0.0625rem;
+}
+
+  .tab-switch:checked + label + .tab-content {
+    z-index: 2;
+    opacity: 1;
+    transition: all 0.35s;
+  }
+
+  form{
+    display: block;
+
+    #email-register{
+      width: 300px;
+      height: 40px;font-size: 24px;
+      padding: 8px;
+      outline: none;
+      border: 2px solid #491E0D;
+      border-radius: 5px;
+    }
+
+    #password-register{
+      width: 300px;
+      height: 40px;font-size: 24px;
+      padding: 8px;
+      outline: none;
+      border: 2px solid #491E0D;
+      border-radius: 5px; 
+      margin-top: 40px;
+    }
+
+    #name-register{
+      width: 300px;
+      height: 40px;font-size: 24px;
+      padding: 8px;
+      outline: none;
+      border: 2px solid #491E0D;
+      border-radius: 5px; 
+      margin-top: 40px;
+    }
+
+    #register-submit{
+      margin-top: 25px;
+      width: 120px;
+      padding: 3px;
+      font-size: 15px;
+      background-color: aliceblue;
+      border-radius: 4px;
+      border: 1px dashed #491E0D;
+      color: #491E0D;
+      transition: .52s;
+    }
+
+    #register-submit:hover{
+      background-color: #491E0D;
+      color: aliceblue;
+      transition: .52s;
+      
+    }
+
+    #email-login{
+      width: 300px;
+      height: 40px;font-size: 24px;
+      padding: 8px;
+      outline: none;
+      border: 2px solid #491E0D;
+      border-radius: 5px;
+    }
+
+    #password-login{
+      width: 300px;
+      height: 40px;font-size: 24px;
+      padding: 8px;
+      outline: none;
+      border: 2px solid #491E0D;
+      border-radius: 5px; 
+      margin-top: 40px;
+    }
+
+    #login{
+      margin-top: 25px;
+      width: 120px;
+      padding: 3px;
+      font-size: 15px;
+      background-color: aliceblue;
+      border-radius: 4px;
+      border: 1px dashed #491E0D;
+      color: #491E0D;
+      transition: .52s; 
+    }
+    
+  #login:hover{
+    color: aliceblue;
+    background-color: #491E0D;
+    transition: .52s; 
+  }
+  }
+
+  .member-type{
+    color: aliceblue;
+    width: 70%;
+    display: flex;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;      
+
+
+    .wine-card{
+      background-image: url(../images/edge2edge-media-aaSmG4bj25I-unsplash.jpg  );
+      background-size: cover;
+      width: 45%;
+      height: 500px;
+      border-radius: 12px;
+      padding: 0px 13px;
+
+      p{
+        font-size: 24px;
+      }
+
+    }
+
+    .desert-card{
+      background-image: url(../images/jordane-mathieu-9trWI5ULtJQ-unsplash.jpg);
+      background-size: cover;
+      width: 45%;
+      height: 500px;
+      border-radius: 12px;
+      padding: 0px 13px;
+      margin-left: 10%;
+      background-position: center left;
+    }
+
+  }
+  
+}
 
 footer{
   background-image: url(../images/jonathan-cooper-zOStFJh3Q-A-unsplash.jpg);
@@ -676,10 +902,8 @@ footer{
     #submit:hover{
       background-color: #491E0D;
       color: aliceblue;
-    }
+      
   }
-
-
 }
 
-}
+}}
