@@ -12,7 +12,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    profile(userName: String!, password: String!): Profile
+    profile(profileId: ID!): Profile
   }
 
   type Mutation {
@@ -24,7 +24,7 @@ const typeDefs = gql`
       lastName: String!
       memberType: String!
     ): Profile
-
+    login(userName: String!, password: String!): Profile
     updateMemberType(profileId: ID!, memberType: String!): Profile
     removeProfile(profileId: ID!): Profile
   }
