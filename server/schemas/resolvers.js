@@ -1,4 +1,4 @@
-const { Profile } = require("../models");
+const { Profile, Reservation } = require("../models");
 
 const resolvers = {
   Query: {
@@ -6,6 +6,9 @@ const resolvers = {
       return Profile.findOne({
         _id: profileId,
       });
+    },
+    reservations: async () => {
+      return Reservation.find();
     },
   },
 
@@ -39,7 +42,7 @@ const resolvers = {
         throw new AuthenticationError("Incorrect password!");
       }
 
-      // const token = signToken(profile);
+   // const token = signToken(profile);
       // return { token, profile };
       return profile;
     },
@@ -55,6 +58,21 @@ const resolvers = {
         { runValidators: true, new: true }
       );
       return updatedProfile;
+    },
+
+    createReservation: async (
+      parent,
+      { firstName, lastName, selectedDate, selectedTime, email }
+    ) => {
+      const reservation = new Reservation({
+        firstName,
+        lastName,
+        selectedDate,
+        selectedTime,
+        email,
+      });
+      await reservation.save();
+      return reservation;
     },
   },
 };
