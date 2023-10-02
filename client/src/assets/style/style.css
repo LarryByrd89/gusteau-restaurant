@@ -549,8 +549,10 @@ p {
   padding-bottom: 400px;
 }
 .memberpage .wrapper {
+  display: grid;
   height: 500px;
   width: 30%;
+  padding: 30px;
 }
 .memberpage .tabs {
   position: relative;
@@ -567,6 +569,7 @@ p {
 .memberpage .tab {
   float: left;
   color: aliceblue;
+  border: 1px solid white;
 }
 .memberpage .tab-switch {
   display: none;
@@ -611,7 +614,11 @@ p {
   transition: all 0.35s;
 }
 .memberpage form {
+  background-color: aliceblue;
   display: block;
+  border: 1px solid aliceblue;
+  padding: 10px;
+  border-radius: 1rem;
 }
 .memberpage form #email-register {
   width: 300px;
@@ -704,7 +711,7 @@ p {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px;
+  padding: 30px;
 }
 .memberpage .member-type .wine-card {
   background-image: url(../images/edge2edge-media-aaSmG4bj25I-unsplash.jpg);
@@ -734,8 +741,8 @@ footer {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 footer h4 {
   font-size: 28px;
@@ -773,3 +780,112 @@ footer .newsletter form #submit:hover {
   background-color: #491E0D;
   color: aliceblue;
 }/*# sourceMappingURL=style.css.map */
+
+/* CONTACT PAGE STYLES */
+
+#contact {
+  padding: 3rem;
+}
+
+.contactBtn {
+  border-radius: 1rem;
+  display: grid;
+  justify-content: center;
+  width: 50%;
+  background-color: aliceblue;
+}
+
+.container.contact__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+  text-align: center;
+}
+
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__options h4 {
+  padding-bottom: 1.7rem;
+}
+
+.contact__option {
+  background: aliceblue;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid black;
+  transition: var(--transition);
+  justify-content: center;
+}
+
+.contact__option:hover {
+  background: transparent;
+  border-color: white;
+}
+
+.contact__option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid white;
+  resize: none;
+  color: black;
+}
+
+/* MEDIA QUERIES (MEDIUM DEVICES) */
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+}
+
+/* MEDIA QUERIES (SMALL DEVICES) */
+
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+     width: var(--container-width-sm);
+  }
+}
+
+/* FOOTER NAV */
+
+.footer-nav {
+  display: inline-block;
+  padding: 30px;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.footer-links {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  display: inline-block;
+}

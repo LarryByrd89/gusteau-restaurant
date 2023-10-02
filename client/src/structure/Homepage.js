@@ -172,9 +172,18 @@ return(
 </section>
 
 <section className="secfour-header container">
-        <h2>View The Menu</h2>
-        <h3>From Dinners to Desert</h3>
-        <p>Look through our online menu of our selected and seasonal items. We have over <strong>40</strong> high quality dishes.  Curated, tested, and tasted from our wonderful chefs, waiters, and most importantly our wonderful patrons.</p>
+        <h2>Discover A Whole New Culinary Journey</h2>
+        <p>
+          With a passion for gourmet cuisine and a dedication to your dining
+          pleasure, we take pride in crafting memorable moments for our
+          cherished guests. From the warm ambiance of our restaurant to the
+          exquisite flavors on your plate, every detail is designed to delight.
+        </p>
+        <p>
+          From classic favorites to innovative creations, our menu is a symphony
+          of flavors that caters to diverse palates. Explore our diverse menu
+          offerings.
+        </p>
 </section>
 
 
