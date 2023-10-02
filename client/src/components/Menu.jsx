@@ -9,14 +9,18 @@ const Menu = () => {
                 <h1>Come Peruse Our Menu</h1>
                 <h2>See This Season's Specialty</h2>
 
-                <p>We Try To Serve New Items Now And Again. We Thrive For New Experiences For Our Chefs And Patrons To Try. <br />
-                    Scroll Down The Menu To See Your Dining O
-                    ptions.
-                </p>
+    
+                <p>We Try To Serve New Items Now And Again. We Thrive For New Experiences For Our Chefs And Patrons To Try. <br/>
+                    Scroll Down The Menu To See Your Dining Options.
+
+
                 <a id="menu-download" href={menu} download="leBonMenu">Download Our Menu Here!</a>
             </div>
             <div className='menu-scroll'>
-                <img className='alt-menu' src={menu} alt='' />
+
+                <img className='alt-menu' src={menu} alt='Le Bon Menu'/>
+
+
             </div>
 
         </section>
