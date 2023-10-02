@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 function Reservation() {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [email, setEmail] = useState('');
 
   const handleDateChange = (date) => {
-    setSelectedDate(date);
+    //setSelectedDate(date);
   };
 
   const handleTimeChange = (e) => {
@@ -61,6 +63,7 @@ function Reservation() {
           <DatePicker
             selected={selectedDate}
             onChange={handleDateChange}
+            minDate = {new Date()}
             dateFormat="yyyy/MM/dd"
             placeholderText="Select a date"
             required
