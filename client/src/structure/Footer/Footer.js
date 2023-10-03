@@ -5,7 +5,7 @@ import './Footer.css';
 function Footer() {
   return (
     <footer>
-      <div className='container'>
+      <div className='footer-container'>
         <h4>Sign Up For Our Quarterly Newsletter For Updates </h4>
         <div className="newsletter">
           <div className='form-div'>
