@@ -1,40 +1,31 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-
 function Reservation() {
   const [selectedDate, setSelectedDate] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [email, setEmail] = useState('');
-
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
-
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value);
   };
-
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
   };
-
   const handleLastNameChange = (e) => {
     setLastName(e.target.value);
   };
-
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // Placeholder for form submission to server
   };
-
   return (
     <div>
       <h2>Make a Reservation</h2>
@@ -93,5 +84,4 @@ function Reservation() {
     </div>
   );
 }
-
 export default Reservation;
