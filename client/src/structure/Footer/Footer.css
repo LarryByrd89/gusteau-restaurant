@@ -27,10 +27,9 @@ footer {
     align-items: center;
   }
   
-  input[type="email"] {
+  .form-div {
     padding: 10px;
     margin: 5px;
-    border: 1px solid #fff;
     border-radius: 5px;
     width: 100%;
     max-width: 300px;
