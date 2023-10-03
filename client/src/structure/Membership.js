@@ -43,7 +43,7 @@ function Membership(){
     </div>
   </div>
 </div>
-<div className="member-type point-opacity">
+<div className="member-type">
   <div id="wine-perk" className="wine-card">
     <p>Wine Perk</p>
     </div>
