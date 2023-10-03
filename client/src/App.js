@@ -1,10 +1,10 @@
 import HomePage from "./structure/Homepage";
 import AboutPage from "./structure/Aboutpage";
 import Membership from "./structure/Membership";
+import Contact from "./components/Contact";
 import Nav from "./structure/Nav";
 import Menu from "./components/Menu";
 import Footer from "./structure/Footer/Footer";
-import Contact from "./components/Contact";
 import Reservation from "./components/Reservation";
 import GuestMembershipPage from "./structure/Membership";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -22,9 +22,9 @@ function App() {
             <Route exact path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/guest-membership" element={<Membership />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/reservation" element={<Reservation />} />
+            <Route path="/guest-membership" element={GuestMembershipPage} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </div>
