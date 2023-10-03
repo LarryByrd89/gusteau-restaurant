@@ -1,8 +1,7 @@
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
-// const routes = require("./api");
-
+const cors = require("cors");
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
 
@@ -13,7 +12,8 @@ const server = new ApolloServer({
   resolvers,
 });
 
-app.use(express.urlencoded({ extended: false }));
+app.use(cors());
+
 app.use(express.json());
 // app.use(routes);
 
@@ -25,7 +25,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
-// Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async () => {
   await server.start();
   server.applyMiddleware({ app });
@@ -40,5 +39,9 @@ const startApolloServer = async () => {
   });
 };
 
+const reservationsRouter = require('./api/reservations');
+app.use('/api/reservations', reservationsRouter);
+
 // Call the async function to start the server
 startApolloServer();
+
