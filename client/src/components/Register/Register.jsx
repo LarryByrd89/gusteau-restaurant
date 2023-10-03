@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
-import { ADD_PROFILE } from "../utils/mutations";
+import { ADD_PROFILE } from "../../utils/mutations";
 import { useNavigate } from "react-router-dom";
+import './register.css'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -122,7 +123,7 @@ const Register = () => {
           </select>
           <br />
           <br />
-          <button type="submit">Register</button>
+          <button id='registerBtn' type="submit">Register</button>
           <br />
           <br />
         </form>
