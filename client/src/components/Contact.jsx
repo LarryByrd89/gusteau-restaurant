@@ -20,9 +20,9 @@ const Contact = () => {
   };
   return (
     <section id="contact">
-      <h4>Get In Touch</h4>
+      <h3>Get In Touch</h3>
       <h2>How To Contact Us</h2>
-      <h4>575-627-0144</h4>
+      <h3>575-627-0144</h3>
       
 
       <div className="container contact__container">
@@ -30,8 +30,8 @@ const Contact = () => {
           <article className='contact__option'>
             <AiOutlineMail className='contact__option-icon'/>
             <h4>E-Mail</h4>
-            <h5>lebonmange.com</h5>
-            <a href="mailto:carloanthonyignacio@gmail.com">Send A Message</a>
+            <h4>lebonmange.com</h4>
+            <h4><a href="mailto:carloanthonyignacio@gmail.com">Send A Message</a></h4>
           </article>
         </div>
 
