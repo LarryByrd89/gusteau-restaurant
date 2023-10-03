@@ -123,7 +123,7 @@ const Register = () => {
           </select>
           <br />
           <br />
-          <button type="submit">Register</button>
+          <button id='registerBtn' type="submit">Register</button>
           <br />
           <br />
         </form>
