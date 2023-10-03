@@ -1,15 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Footer.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Footer.css'; 
 
 function Footer() {
   return (
     <footer>
+
       <div className="footer-container">
         <h4>Sign Up For Our Quarterly Newsletter For Updates </h4>
         <div className="newsletter">
           <div className="form-div">
             <form>
+
               <input
                 id="footer-email"
                 type="email"
@@ -32,6 +34,9 @@ function Footer() {
           </li>
           <li>
             <Link to="/menu">Menu</Link>
+          </li>
+          <li>
+            <Link to="/reservations">Reservations</Link>
           </li>
           <li>
             <Link to="/guest-membership">Guest Membership</Link>
