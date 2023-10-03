@@ -1,6 +1,6 @@
 import HomePage from "./structure/Homepage";
 import AboutPage from "./structure/Aboutpage";
-import Membership from "./structure/Membership";
+//import Membership from "./structure/Membership";
 import Contact from "./components/Contact";
 import Nav from "./structure/Nav";
 import Menu from "./components/Menu";
@@ -11,8 +11,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import { ApolloProvider } from "@apollo/client";
 import client from "./utils/client";
+import Register from "./components/Register";
+import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import Login from "./components/Login";
 
 function App() {
   return (
