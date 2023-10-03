@@ -11,8 +11,18 @@ const typeDefs = gql`
     memberType: String
   }
 
+  type Reservation {
+    _id: ID
+    firstName: String
+    lastName: String
+    selectedDate: String
+    selectedTime: String
+    email: String
+  }
+
   type Query {
     profile(profileId: ID!): Profile
+    reservations: [Reservation!]!
   }
 
   type Mutation {
@@ -24,6 +34,13 @@ const typeDefs = gql`
       lastName: String!
       memberType: String!
     ): Profile
+    createReservation(
+      firstName: String!
+      lastName: String!
+      selectedDate: String!
+      selectedTime: String!
+      email: String!
+    ): Reservation
     login(userName: String!, password: String!): Profile
     updateMemberType(profileId: ID!, memberType: String!): Profile
     removeProfile(profileId: ID!): Profile

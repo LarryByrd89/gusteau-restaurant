@@ -18,7 +18,7 @@ function Nav() {
               <ul>
                 <li>1800 S Main St, Roswell NY </li>
                 <li>575-627-0144</li>
-                <li>Open Tues - Sun From 1:00pm - 10:00pm</li>
+                <li>Tues-Sun | 12:00pm - 10:00pm</li>
               </ul>
             </div>
           </div>
@@ -50,9 +50,12 @@ function Nav() {
                       Menu
                     </Link>
                   </li>
+                  <Link to="/reservation" onClick={closeMenu}>
+                      Make A Reservation
+                    </Link>
                   <li>
                     <Link to="/guest-membership" onClick={closeMenu}>
-                      Guest Membership
+                      Patron Perks
                     </Link>
                   </li>
                   <li>
