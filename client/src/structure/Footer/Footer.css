@@ -27,7 +27,7 @@ footer {
     align-items: center;
   }
   
-  input[type="email"] {
+  #footer-email {
     padding: 10px;
     margin: 5px;
     border: 1px solid #fff;
