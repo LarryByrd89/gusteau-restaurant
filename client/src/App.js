@@ -1,5 +1,7 @@
 import HomePage from "./structure/Homepage";
 import AboutPage from "./structure/Aboutpage";
+import Membership from "./structure/Membership";
+import Contact from "./components/Contact"
 import Nav from "./structure/Nav";
 import Menu from "./components/Menu";
 import Footer from "./structure/Footer/Footer";
