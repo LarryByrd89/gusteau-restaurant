@@ -4,7 +4,7 @@ import Membership from "./structure/Membership";
 import Contact from "./components/Contact"
 import Nav from "./structure/Nav";
 import Menu from "./components/Menu";
-import Footer from "./structure/Footer";
+import Footer from "./structure/Footer/Footer";
 import Contact from "./components/Contact";
 import Reservation from "./components/Reservation";
 import GuestMembershipPage from "./structure/Membership"; 
