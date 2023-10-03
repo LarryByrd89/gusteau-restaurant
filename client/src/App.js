@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import { ApolloProvider } from "@apollo/client";
 import client from "./utils/client";
+import Register from "./components/Register";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 
