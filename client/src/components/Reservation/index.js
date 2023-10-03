@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 function Reservation() {
-  const [selectedDate, setSelectedDate] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
-  const [email, setEmail] = useState('');
+  const [selectedDate, setSelectedDate] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [selectedTime, setSelectedTime] = useState("");
+  const [email, setEmail] = useState("");
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
