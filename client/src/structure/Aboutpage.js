@@ -27,11 +27,12 @@ function Aboutpage(){
         </section>
 
     <section className="staff">
-    <div className="container">
 
     <div className="container">
 
-
+    <h2>Meet The Residents</h2>
+    <h3>From The Front To The Back Of The House</h3>
+    <p>Whether you see or not see some of the faces here, they are vital to our important operation.</p>
   <div className="gallery-wrap">
     <div className="item item-1"></div>
     <div className="item item-2"></div>
@@ -50,7 +51,6 @@ function Aboutpage(){
             <p>Isabelle Dubois, our Sous Chef, brings a wealth of culinary expertise to The Residence. Prior to joining our team, Isabelle had the privilege of working alongside the legendary Chef Antoine Michaud. Her culinary journey began in the bustling bistros of Paris, where she learned the art of balancing flavors and textures. Isabelle's commitment to perfection and her love for the culinary arts shine through in every dish she prepares.</p>
         <h3>Maître d'Hôtel: Jean-Pierre Martin</h3>
             <p>Jean-Pierre Martin, our Maître d'Hôtel, is your guide to a seamless dining experience at The Residence. With a background in hospitality that spans two decades, Jean-Pierre ensures that every guest feels welcome and pampered. His attention to detail and commitment to guest satisfaction are second to none. Jean-Pierre's warm demeanor and extensive knowledge of wine pairings elevate your evening to an unforgettable level.</p> */}
-    </div>
 
     </section>
 

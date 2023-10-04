@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import "../assets/style/style.css"
 
 function Reservation() {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -35,13 +37,16 @@ function Reservation() {
   };
 
   return (
-    <div>
-      <h2>Make a Reservation</h2>
+    <section className='reservation'>
+      <div className='container'>
+      <h1>Make a Reservation</h1>
+      <h2>Remember Hours Are From<br/> 12:00 pm -10:00 pm </h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>First Name:</label>
           <input
             type="text"
+            className='reservation-field'
             value={firstName}
             onChange={handleFirstNameChange}
             required
@@ -51,6 +56,7 @@ function Reservation() {
           <label>Last Name:</label>
           <input
             type="text"
+            className='reservation-field'
             value={lastName}
             onChange={handleLastNameChange}
             required
@@ -79,16 +85,19 @@ function Reservation() {
           <label>Email:</label>
           <input
             type="email"
+            className='reservation-field'
+            id=''
             value={email}
             onChange={handleEmailChange}
             required
           />
         </div>
         <div>
-          <button type="submit">Submit Reservation</button>
+          <button type="submit" id='reservation-btn'>Submit Reservation</button>
         </div>
       </form>
-    </div>
+      </div>
+      </section>
   );
 }
 

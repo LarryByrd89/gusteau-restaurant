@@ -83,17 +83,19 @@ header .logo-nav .logo {
   z-index: 10;
 }
 header .logo-nav nav {
-  overflow-y: hidden;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 header .logo-nav nav *, header .logo-nav nav *:before, header .logo-nav nav *:after {
   box-sizing: border-box;
 }
 header .logo-nav nav label .menu {
   position: absolute;
-  right: -100px;
+  right: 0px;
   top: 20px;
   z-index: 100;
-  width: 200px;
+  width: 100px;
   height: 200px;
   border-radius: 50% 50% 50% 50%;
   transition: 0.5s ease-in-out;
@@ -436,11 +438,14 @@ p {
   width: 100%;
   height: 100%;
 }
+.staff h2 {
+  font-size: 38px;
+}
 .staff .gallery-wrap {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   padding-bottom: 200px;
 }
 .staff .item {
@@ -452,22 +457,23 @@ p {
   transition: flex 0.8s ease;
 }
 .staff .item:hover {
-  flex: 7;
+  flex: 2;
 }
 .staff .item-1 {
-  background-image: url("https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80");
+  background-image: url("../images/headchef.jpg");
+  background-position: top;
 }
 .staff .item-2 {
-  background-image: url("https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80");
+  background-image: url("../images/jeff-siepman-kyuPjZudBKs-unsplash.jpg");
 }
 .staff .item-3 {
-  background-image: url("https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80");
+  background-image: url("../images/pexels-yan-krukau-6817133.jpg");
 }
 .staff .item-4 {
-  background-image: url("https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80");
+  background-image: url("../images/pexels-liliana-drew-9462192.jpg");
 }
 .staff .item-5 {
-  background-image: url("https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80");
+  background-image: url("../images/getty-images-tbyh09cH0_0-unsplash.jpg");
 }
 
 #menu {
@@ -729,15 +735,26 @@ p {
 }
 
 #contact {
-  padding: 3rem;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .contactBtn {
-  border-radius: 1rem;
-  display: grid;
+  border: 2px solid #491E0D;
+  border-radius: 4px;
   justify-content: center;
-  width: 50%;
+  width: 200px;
   background-color: aliceblue;
+  font-family: "Jost", serif;
+  font-size: 15px;
+  height: 40px;
+  transition: 0.52s;
+}
+
+.contactBtn:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+  transition: 0.52s;
 }
 
 .container.contact__container {
@@ -763,7 +780,7 @@ p {
   padding: 1.2rem;
   border-radius: 1.2rem;
   text-align: center;
-  border: 1px solid black;
+  border: 1px dashed #491E0D;
   transition: var(--transition);
   justify-content: center;
 }
@@ -796,10 +813,13 @@ textarea {
   width: 100%;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background: transparent;
-  border: 2px solid #491E0D;
+  background: aliceblue;
   resize: none;
-  color: black;
+  border: 2px solid #491E0D;
+  color: #491E0D;
+  outline: none;
+  font-family: "Jost", serif;
+  font-size: 18px;
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
@@ -815,6 +835,44 @@ textarea {
     width: var(--container-width-sm);
   }
 }
+.reservation {
+  padding-top: 50px;
+  background-color: #491E0D;
+  padding-bottom: 200px;
+}
+.reservation h1 {
+  font-size: 48px;
+  color: aliceblue;
+}
+.reservation h2 {
+  font-size: 38px;
+  color: aliceblue;
+}
+.reservation label {
+  color: aliceblue;
+  margin-bottom: 40px;
+}
+.reservation .reservation-field {
+  height: 50px;
+}
+.reservation #reservation-btn {
+  margin-top: 30px;
+  height: 40px;
+  width: 200px;
+  padding: 8px;
+  font-family: "Jost", serif;
+  font-size: 18px;
+  border: 1px solid #491E0D;
+  background-color: aliceblue;
+  color: #491E0D;
+  transition: 0.52s;
+}
+.reservation #reservation-btn:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+  transition: 0.52s;
+}
+
 /* FOOTER NAV */
 .footer-nav {
   display: inline-block;
@@ -832,7 +890,8 @@ textarea {
 }
 
 footer {
-  background-image: url(../images/jonathan-cooper-zOStFJh3Q-A-unsplash.jpg);
+  background-image: url(../images/priscilla-du-preez-3MrkGyBoRc0-unsplash.jpg);
+  background-position: center;
   min-height: 285px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -858,11 +917,11 @@ footer .newsletter form input:focus {
 }
 footer .newsletter form #email {
   border-radius: 4px;
-  border: 1px solid #491E0D;
   height: 40px;
   width: 440px;
   padding: 8px;
   font-size: 22px;
+  background-color: aliceblue;
 }
 footer .newsletter form #submit {
   border: 1px dashed #491E0D;
@@ -871,10 +930,14 @@ footer .newsletter form #submit {
   width: 120px;
   padding: 12px;
   border-radius: 9px;
-}
-footer .newsletter form #submit:hover {
   background-color: #491E0D;
   color: aliceblue;
+  transition: 0.52s;
+}
+footer .newsletter form #submit:hover {
+  background-color: aliceblue;
+  color: #491E0D;
+  transition: 0.52s;
 }
 
 @media (max-width: 1200px) {
@@ -911,12 +974,31 @@ footer .newsletter form #submit:hover {
     margin-top: 200px;
   }
 }
+@media (max-width: 700px) {
+  header .logo-nav nav label input:checked + .menu + ul {
+    padding-top: 130px;
+  }
+  header .logo-nav .scrolling-words-container {
+    margin-top: 50px;
+  }
+  header .logo-nav nav label a {
+    font-size: 22px;
+  }
+  header .logo-nav .logo img {
+    margin-top: 40px;
+    width: 200px;
+  }
+}
 @media (max-width: 600px) {
   header {
     height: 300px;
   }
   header .logo-nav {
     display: block;
+  }
+  header .logo-nav .logo {
+    left: 55%;
+    top: 10%;
   }
   header .logo-nav .scrolling-words-container {
     margin-top: 0px;
@@ -965,7 +1047,18 @@ footer .newsletter form #submit:hover {
 }
 @media (max-width: 600px) and (max-width: 450px) {
   header .logo-nav .logo {
-    left: 11.5%;
+    left: 25%;
+    top: 10%;
+  }
+  header .logo-nav nav label a {
+    font-size: 22px;
+  }
+  header .logo-nav nav label .menu {
+    top: 40px;
+    height: 120px;
+  }
+  header .logo-nav nav label input:checked + .menu {
+    height: 260px;
   }
   .description {
     width: 100%;

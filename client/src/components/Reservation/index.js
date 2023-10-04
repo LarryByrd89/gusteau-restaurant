@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
+
 function Reservation() {
   const [selectedDate, setSelectedDate] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -27,8 +29,8 @@ function Reservation() {
     // Placeholder for form submission to server
   };
   return (
-    <div>
-      <h2>Make a Reservation</h2>
+    <section className="container">
+      <h1>Make a Reservation</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label>First Name:</label>
@@ -81,7 +83,7 @@ function Reservation() {
           <button type="submit">Submit Reservation</button>
         </div>
       </form>
-    </div>
+    </section>
   );
 }
 export default Reservation;

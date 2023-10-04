@@ -1,6 +1,5 @@
 footer {
-    background-color: #333;
-    color: #fff;
+    color: aliceblue;
     padding: 20px 0;
     text-align: center;
   }
@@ -38,7 +37,7 @@ footer {
   #submit {
     padding: 10px 20px;
     margin: 5px;
-    background-color: #ff5733;
+    background-color: #;
     border: none;
     border-radius: 5px;
     color: #fff;
