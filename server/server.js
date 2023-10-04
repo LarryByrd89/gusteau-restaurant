@@ -4,12 +4,14 @@ const path = require("path");
 const cors = require("cors");
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
+const { authMiddleware } = require("./utils/auth");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware,
 });
 
 app.use(cors());
@@ -39,9 +41,8 @@ const startApolloServer = async () => {
   });
 };
 
-const reservationsRouter = require('./api/reservations');
-app.use('/api/reservations', reservationsRouter);
+const reservationsRouter = require("./api/reservations");
+app.use("/api/reservations", reservationsRouter);
 
 // Call the async function to start the server
 startApolloServer();
-
