@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import siteIcon from '../assets/images/Logo.png';
 import { Link } from 'react-router-dom';
-import { useAuth } from './AuthContext';
+import { useQuery } from "@apollo/client";
+import { QUERY_ME } from "../utils/queries";
 
 function Nav() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const { user, logout, isAuthenticated } = useAuth();
-
+  const { data } = useQuery(QUERY_ME);
+    console.log(data)
   const closeMenu = () => {
     setMenuOpen(false);
   };
@@ -38,9 +39,9 @@ function Nav() {
                 </span>
                 <ul>
                 <li>
-                {isAuthenticated() ? (
-                  <span>
-                    Welcome, {user.username}! <button onClick={logout}>Logout</button>
+                {data && data.me.userName ? (
+                  <span style={{ color: 'white', fontSize: '35px' }}>
+                    Welcome, {data.me.userName}!
                   </span>
                 ) : null}
                   </li>
