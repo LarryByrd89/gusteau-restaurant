@@ -26,21 +26,14 @@ const Login = (props) => {
           password: formData.password,
         },
       });
-      console.log(data);
       setFormData({
         userName: "",
         email: "",
       });
-      navigate("/", {
-        state: { userName: data.login.userName, _id: data.login._id },
-      });
-      //   props.history.push({
-      //     pathname: "/",
-      //     state: { userName: data.login.userName, _id: data.login._id },
-      //   });
+      localStorage.setItem("id_token", data.login.token);
+      navigate("/");
 
-      // JWT token here if you want
-      // route them back to home with success message?
+    
     } catch (error) {
       console.error(error);
       // Handle login error

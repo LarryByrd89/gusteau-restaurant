@@ -13,3 +13,17 @@ export const QUERY_SINGLE_PROFILE = gql`
     }
   }
 `;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      userName
+      email
+      password
+      firstName
+      lastName
+      memberType
+    }
+  }
+`;

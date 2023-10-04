@@ -1,21 +1,29 @@
-import { ApolloClient, InMemoryCache, HttpLink, from } from "@apollo/client";
-import { onError } from "@apollo/client/link/error";
+import {
+  ApolloClient,
+  InMemoryCache,
+  HttpLink,
+  ApolloLink,
+  concat,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
-const errorLink = onError(({ graphQLErrors, networkError }) => {
-  if (graphQLErrors)
-    graphQLErrors.forEach(({ message, locations, path }) =>
-      console.log(
-        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
-      )
-    );
-  if (networkError) console.log(`[Network error]: ${networkError}`);
+const authMiddleware = new ApolloLink((operation, forward) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem("id_token");
+  operation.setContext({
+    headers: {
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  });
+
+  return forward(operation);
 });
 
 const httpLink = new HttpLink({ uri: "http://localhost:3001/graphql" });
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: from([errorLink, httpLink]),
+  link: concat(authMiddleware, httpLink),
 });
 
 export default client;

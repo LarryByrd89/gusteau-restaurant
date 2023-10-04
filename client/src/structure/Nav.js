@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import siteIcon from '../assets/images/Logo.png';
 import { Link } from 'react-router-dom';
+import { useQuery } from "@apollo/client";
+import { QUERY_ME } from "../utils/queries";
 
 function Nav() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
+  const { data } = useQuery(QUERY_ME);
+    console.log(data)
   const closeMenu = () => {
     setMenuOpen(false);
   };
@@ -35,6 +38,13 @@ function Nav() {
                   <span className="hamburger"></span>
                 </span>
                 <ul>
+                <li>
+                {data && data.me.userName ? (
+                  <span style={{ color: 'white', fontSize: '35px' }}>
+                    Welcome, {data.me.userName}!
+                  </span>
+                ) : null}
+                  </li>
                   <li>
                     <Link to="/" onClick={closeMenu}>
                       Home
@@ -50,9 +60,11 @@ function Nav() {
                       Menu
                     </Link>
                   </li>
+                  <li>
                   <Link to="/reservation" onClick={closeMenu}>
                       Make A Reservation
                     </Link>
+                  </li>
                   <li>
                     <Link to="/guest-membership" onClick={closeMenu}>
                       Patron Perks
