@@ -95,8 +95,10 @@ header{
 
 
     nav{
-      overflow-y: hidden;
-    
+      margin: 0; 
+      height: 100%; 
+      overflow: hidden;
+
         *, *:before, *:after 
         { box-sizing: border-box; }
         
@@ -104,10 +106,10 @@ header{
         
         label .menu {
           position: absolute;
-          right: -100px;
+          right: 0px;
           top: 20px;
           z-index: 100;
-          width: 200px;
+          width: 100px;
           height: 200px;
           border-radius: 50% 50% 50% 50%;
           -webkit-transition: .5s ease-in-out;
@@ -357,6 +359,8 @@ header{
       padding-bottom: 20px;
      }
 
+     
+
   }
 
   .home-parallax{
@@ -476,6 +480,7 @@ p{
     
     h1{
       font-size: 48px;
+
     }
 
     h2{
@@ -515,13 +520,15 @@ p{
   width: 100%;
   height: 100%;
 
-
+  h2{
+    font-size: 38px;
+  }
 
 .gallery-wrap {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   padding-bottom: 200px;
 }
 
@@ -534,28 +541,29 @@ p{
   transition: flex 0.8s ease;
   
   &:hover{
-    flex: 7;
+    flex: 2;
   }
 }
 
 .item-1 { 
-  background-image: url('https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80');
+  background-image: url('../images/headchef.jpg');
+  background-position: top;
 }
 
 .item-2 { 
-  background-image: url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80');
+  background-image: url('../images/jeff-siepman-kyuPjZudBKs-unsplash.jpg');
 }
 
 .item-3 { 
-  background-image: url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80');
+  background-image: url('../images/pexels-yan-krukau-6817133.jpg');
 }
 
 .item-4 { 
-  background-image: url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80');
+  background-image: url('../images/pexels-liliana-drew-9462192.jpg');
 }
 
 .item-5 { 
-  background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80');
+  background-image: url('../images/getty-images-tbyh09cH0_0-unsplash.jpg');
 }
 
 }
@@ -646,220 +654,257 @@ p{
   
 }
 
-.memberpage{
+.memberpage {
   background-color: #491E0D;
   display: flex;
   padding-top: 120px;
   padding-bottom: 400px;
 
 
-  .wrapper {
-    height: 500px;
-    width: 30%;
-  }
-  .tabs {
-    position: relative;
-    height: 14.75rem;
-  }
-  .tabs::before,
-  .tabs::after {
-    content: "";
-    display: table;
-  }
-  .tabs::after {
-    clear: both;
-  }
-  .tab {
-    float: left;
-    color: aliceblue;
-  }
-  .tab-switch {
-    display: none;
-  }
-  .tab-label {
-    display: block;
-    line-height: 2.75em;
-    height: 3em;
-    padding: 0 1.618em;
-    background: #491E0D;
-    border-right: 0.125rem solid #491E0D;
-    color: aliceblue;
-    font-family: 'Jost', serif;
-    cursor: pointer;
-    top: 0;
-    transition: all 0.25s;
-  }
-  .tab-label:hover {
-    top: -0.25rem;
-    transition: top 0.25s;
-  }
-  .tab-content {
-    height: 12rem;
-    position: absolute;
-    z-index: 1;
-    top: 2.75em;
-    left: 0;
-    padding-top: 1.618rem;
-    opacity: 0;
-    transition: all 0.35s;
-  }
-  .tab-switch:checked + .tab-label {
+//   .wrapper {
+//     height: 500px;
+//     width: 30%;
+//   }
+//   .tabs {
+//     position: relative;
+//     height: 14.75rem;
+//   }
+//   .tabs::before,
+//   .tabs::after {
+//     content: "";
+//     display: table;
+//   }
+//   .tabs::after {
+//     clear: both;
+//   }
+//   .tab {
+//     float: left;
+//     color: aliceblue;
+//   }
+//   .tab-switch {
+//     display: none;
+//   }
+//   .tab-label {
+//     display: block;
+//     line-height: 2.75em;
+//     height: 3em;
+//     padding: 0 1.618em;
+//     background: #491E0D;
+//     border-right: 0.125rem solid #491E0D;
+//     color: aliceblue;
+//     font-family: 'Jost', serif;
+//     cursor: pointer;
+//     top: 0;
+//     transition: all 0.25s;
+//   }
+//   .tab-label:hover {
+//     top: -0.25rem;
+//     transition: top 0.25s;
+//   }
+//   .tab-content {
+//     height: 12rem;
+//     position: absolute;
+//     z-index: 1;
+//     top: 2.75em;
+//     left: 0;
+//     padding-top: 1.618rem;
+//     opacity: 0;
+//     transition: all 0.35s;
+//   }
+//   .tab-switch:checked + .tab-label {
 
-    color: aliceblue;
-    border-bottom: 0;
-    transition: all 0.35s;
-    z-index: 1;
-    top: -0.0625rem;
+//     color: aliceblue;
+//     border-bottom: 0;
+//     transition: all 0.35s;
+//     z-index: 1;
+//     top: -0.0625rem;
+// }
+
+//   .tab-switch:checked + label + .tab-content {
+//     z-index: 2;
+//     opacity: 1;
+//     transition: all 0.35s;
+//   }
+
+//   form{
+//     display: block;
+
+//     #email-register{
+//       width: 300px;
+//       height: 40px;font-size: 24px;
+//       padding: 8px;
+//       outline: none;
+//       border: 2px solid #491E0D;
+//       border-radius: 5px;
+//     }
+
+//     #password-register{
+//       width: 300px;
+//       height: 40px;font-size: 24px;
+//       padding: 8px;
+//       outline: none;
+//       border: 2px solid #491E0D;
+//       border-radius: 5px; 
+//       margin-top: 40px;
+//     }
+
+//     #name-register{
+//       width: 300px;
+//       height: 40px;font-size: 24px;
+//       padding: 8px;
+//       outline: none;
+//       border: 2px solid #491E0D;
+//       border-radius: 5px; 
+//       margin-top: 40px;
+//     }
+
+//     #register-submit{
+//       margin-top: 25px;
+//       width: 120px;
+//       padding: 3px;
+//       font-size: 15px;
+//       background-color: aliceblue;
+//       border-radius: 4px;
+//       border: 1px dashed #491E0D;
+//       color: #491E0D;
+//       transition: .52s;
+//     }
+
+//     #register-submit:hover{
+//       background-color: #491E0D;
+//       color: aliceblue;
+//       transition: .52s;
+      
+//     }
+
+//     #email-login{
+//       width: 300px;
+//       height: 40px;font-size: 24px;
+//       padding: 8px;
+//       outline: none;
+//       border: 2px solid #491E0D;
+//       border-radius: 5px;
+//     }
+
+//     #password-login{
+//       width: 300px;
+//       height: 40px;font-size: 24px;
+//       padding: 8px;
+//       outline: none;
+//       border: 2px solid #491E0D;
+//       border-radius: 5px; 
+//       margin-top: 40px;
+//     }
+
+//     #login{
+//       margin-top: 25px;
+//       width: 120px;
+//       padding: 3px;
+//       font-size: 15px;
+//       background-color: aliceblue;
+//       border-radius: 4px;
+//       border: 1px dashed #491E0D;
+//       color: #491E0D;
+//       transition: .52s; 
+//     }
+    
+//   #login:hover{
+//     color: aliceblue;
+//     background-color: #491E0D;
+//     transition: .52s; 
+//   }
+//   }
+
 }
 
-  .tab-switch:checked + label + .tab-content {
-    z-index: 2;
-    opacity: 1;
-    transition: all 0.35s;
-  }
+.member-type{
+  color: aliceblue;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;      
+  margin-top: 70px;
+  text-align: center;
 
-  form{
-    display: block;
+.rounded-border{
+  border: 1px solid #FCF6F6;
+  border-radius: 12px;
+  height: 670px;
 
-    #email-register{
-      width: 300px;
-      height: 40px;font-size: 24px;
-      padding: 8px;
-      outline: none;
-      border: 2px solid #491E0D;
-      border-radius: 5px;
-    }
-
-    #password-register{
-      width: 300px;
-      height: 40px;font-size: 24px;
-      padding: 8px;
-      outline: none;
-      border: 2px solid #491E0D;
-      border-radius: 5px; 
-      margin-top: 40px;
-    }
-
-    #name-register{
-      width: 300px;
-      height: 40px;font-size: 24px;
-      padding: 8px;
-      outline: none;
-      border: 2px solid #491E0D;
-      border-radius: 5px; 
-      margin-top: 40px;
-    }
-
-    #register-submit{
-      margin-top: 25px;
-      width: 120px;
-      padding: 3px;
-      font-size: 15px;
-      background-color: aliceblue;
-      border-radius: 4px;
-      border: 1px dashed #491E0D;
-      color: #491E0D;
-      transition: .52s;
-    }
-
-    #register-submit:hover{
-      background-color: #491E0D;
-      color: aliceblue;
-      transition: .52s;
-      
-    }
-
-    #email-login{
-      width: 300px;
-      height: 40px;font-size: 24px;
-      padding: 8px;
-      outline: none;
-      border: 2px solid #491E0D;
-      border-radius: 5px;
-    }
-
-    #password-login{
-      width: 300px;
-      height: 40px;font-size: 24px;
-      padding: 8px;
-      outline: none;
-      border: 2px solid #491E0D;
-      border-radius: 5px; 
-      margin-top: 40px;
-    }
-
-    #login{
-      margin-top: 25px;
-      width: 120px;
-      padding: 3px;
-      font-size: 15px;
-      background-color: aliceblue;
-      border-radius: 4px;
-      border: 1px dashed #491E0D;
-      color: #491E0D;
-      transition: .52s; 
-    }
-    
-  #login:hover{
-    color: aliceblue;
-    background-color: #491E0D;
-    transition: .52s; 
-  }
-  }
-
-  .member-type{
-    color: aliceblue;
-    width: 70%;
-    display: flex;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 10px;      
+}
 
 
-    .wine-card{
-      background-image: url(../images/edge2edge-media-aaSmG4bj25I-unsplash.jpg  );
-      background-size: cover;
-      width: 45%;
-      height: 500px;
-      border-radius: 12px;
-      padding: 0px 13px;
+ul{
+  padding-top: 50px;
+}
+li{
+  font-size: 25px;
+  list-style-type: none;
+}
 
-      p{
-        font-size: 24px;
-      }
+
+  .wine-card{
+    background-image: url(../images/valentin-lacoste-4eyAy57ObtQ-unsplash.jpg  );
+
+
+
+    h3{
+      font-size: 32px;
+      padding-top: 12px;
 
     }
 
-    .desert-card{
-      background-image: url(../images/jordane-mathieu-9trWI5ULtJQ-unsplash.jpg);
-      background-size: cover;
-      width: 45%;
-      height: 500px;
-      border-radius: 12px;
-      padding: 0px 13px;
-      margin-left: 10%;
-      background-position: center left;
+    p{
+      font-size: 24px;
     }
 
   }
+
+  .dessert-card{
+    background-image: url(../images/jordane-mathieu-9trWI5ULtJQ-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    border-radius: 12px;
+    padding: 13px;
+  }
+
+  p{
+    font-size: 24px;
+  }
+
+}
+
+
+
+#contact {
+  padding-top: 80px;
+  padding-bottom: 100px
   
 }
 
-#contact {
-  padding: 3rem;
+.contactBtn {
+  border: 2px solid #491E0D;
+  border-radius: 4px;
+  justify-content: center;
+  width: 200px;
+  background-color: aliceblue;
+  font-family: 'Jost', serif;
+  font-size: 15px;
+  height: 40px;
+  transition: .52s;
 }
 
-.contactBtn {
-  border-radius: 1rem;
-  display: grid;
-  justify-content: center;
-  width: 50%;
-  background-color: aliceblue;
+.contactBtn:hover {
+  background-color: #491E0D;
+  color: aliceblue;
+  transition: .52s;
+
+
 }
 
 .container.contact__container {
@@ -885,7 +930,7 @@ p{
   padding: 1.2rem;
   border-radius: 1.2rem;
   text-align: center;
-  border: 1px solid black;
+  border: 1px dashed #491E0D;
   transition: var(--transition);
   justify-content: center;
 }
@@ -918,10 +963,13 @@ textarea {
   width: 100%;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background: transparent;
-  border: 2px solid #491E0D;
+  background: aliceblue;
   resize: none;
-  color: black;
+  border: 2px solid #491E0D;
+  color: #491E0D;
+  outline: none;
+  font-family: 'Jost', serif;
+  font-size: 18px;
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
@@ -940,6 +988,55 @@ textarea {
   }
 }
 
+.reservation{
+  padding-top: 50px;
+  background-color: #491E0D;
+  padding-bottom: 200px;
+  
+   h1{
+    font-size: 48px;
+    color: aliceblue
+   }
+
+   h2{
+    font-size: 38px;
+    color: aliceblue;
+   }
+
+  label{
+    color: aliceblue;
+    margin-bottom: 40px;
+  }
+
+  .reservation-field {
+    height: 50px;
+  }
+
+  #reservation-btn{
+    margin-top: 30px;
+    height: 40px;
+    width: 200px;
+    padding: 8px;
+    font-family: 'Jost', serif;
+    font-size: 18px;
+    border: 1px solid #491E0D;
+    background-color: aliceblue;
+    color: #491E0D;
+    transition: .52s;
+
+  }
+
+  #reservation-btn:hover{
+    background-color: #491E0D;
+    color: aliceblue;
+    transition: .52s;
+  }
+}
+
+
+
+
+
 /* FOOTER NAV */
 
 .footer-nav {
@@ -957,7 +1054,8 @@ textarea {
   display: inline-block;
 }
 footer{
-  background-image: url(../images/jonathan-cooper-zOStFJh3Q-A-unsplash.jpg);
+  background-image: url(../images/priscilla-du-preez-3MrkGyBoRc0-unsplash.jpg);
+  background-position: center;
   min-height: 285px;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -989,11 +1087,11 @@ footer{
 
     #email{
       border-radius: 4px;
-      border: 1px solid #491E0D;
       height: 40px;
       width: 440px;
       padding: 8px;
       font-size: 22px;
+      background-color: aliceblue;
     }
 
 
@@ -1004,12 +1102,16 @@ footer{
       width: 120px;
       padding: 12px;
       border-radius: 9px;
+      background-color: #491E0D;
+      color: aliceblue;
+      transition: .52s;
     
     }
 
     #submit:hover{
-      background-color: #491E0D;
-      color: aliceblue;
+      background-color: aliceblue;
+      color: #491E0D;
+      transition: .52s;
       
   }
 }
@@ -1071,6 +1173,26 @@ footer{
   }
 }
 
+@media (max-width: 700px){
+
+  header .logo-nav nav label input:checked + .menu + ul{
+    padding-top: 130px;
+  }
+  
+  header .logo-nav .scrolling-words-container {
+    margin-top: 50px;
+  }
+
+  header .logo-nav nav label a{
+    font-size: 22px;
+  }
+  header .logo-nav .logo img {
+    margin-top: 40px;
+
+    width: 200px;
+  }
+}
+
 @media (max-width: 600px){
 
   header{
@@ -1079,6 +1201,12 @@ footer{
   
   header .logo-nav{
     display: block;
+  }
+
+  header .logo-nav .logo{
+    left: 55%;
+    top: 10%;
+
   }
 
   header .logo-nav .scrolling-words-container {
@@ -1139,7 +1267,26 @@ footer{
 
 @media (max-width: 450px) {
   header .logo-nav .logo{
-    left: 11.5%;
+    left: 25%;
+    top: 10%;
+
+  }
+
+  header .logo-nav nav label a{
+    font-size: 22px;
+  }
+
+  header .logo-nav nav label .menu{
+    top: 40px;
+    height: 120px;
+  }
+
+  header .logo-nav nav label input:checked + .menu {
+    height: 260px;
+  }
+
+  .footer-links li{
+    display: block;
   }
 
 

@@ -1,28 +1,21 @@
-import React, { useState } from "react";
-import DatePicker from "react-datepicker";
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import "../assets/style/style.css"
 
 function Reservation() {
-  const [selectedDate, setSelectedDate] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [selectedTime, setSelectedTime] = useState("");
-  const [email, setEmail] = useState("");
-  const [isTimeValid, setIsTimeValid] = useState(true);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [selectedTime, setSelectedTime] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
 
   const handleTimeChange = (e) => {
-    const newTime = e.target.value;
-    const isValid = newTime >= "12:00" && newTime <= "21:00";
-
-    if (isValid) {
-      setSelectedTime(newTime);
-    }
-
-    setIsTimeValid(isValid);
+    setSelectedTime(e.target.value);
   };
 
   const handleFirstNameChange = (e) => {
@@ -39,17 +32,21 @@ function Reservation() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     // Placeholder for form submission to server
   };
 
   return (
-    <section className="container">
+    <section className='reservation'>
+      <div className='container'>
       <h1>Make a Reservation</h1>
+      <h2>Remember Hours Are From<br/> 12:00 pm -10:00 pm </h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>First Name:</label>
           <input
             type="text"
+            className='reservation-field'
             value={firstName}
             onChange={handleFirstNameChange}
             required
@@ -59,6 +56,7 @@ function Reservation() {
           <label>Last Name:</label>
           <input
             type="text"
+            className='reservation-field'
             value={lastName}
             onChange={handleLastNameChange}
             required
@@ -69,7 +67,6 @@ function Reservation() {
           <DatePicker
             selected={selectedDate}
             onChange={handleDateChange}
-            minDate={new Date()}
             dateFormat="yyyy/MM/dd"
             placeholderText="Select a date"
             required
@@ -81,26 +78,26 @@ function Reservation() {
             type="time"
             value={selectedTime}
             onChange={handleTimeChange}
-            minTime="12:00"
-            maxTime="21:00"
             required
           />
-          {!isTimeValid && <p style={{ color: "red" }}>Invalid time</p>}
         </div>
         <div>
           <label>Email:</label>
           <input
             type="email"
+            className='reservation-field'
+            id=''
             value={email}
             onChange={handleEmailChange}
             required
           />
         </div>
         <div>
-          <button type="submit">Submit Reservation</button>
+          <button type="submit" id='reservation-btn'>Submit Reservation</button>
         </div>
       </form>
-    </section>
+      </div>
+      </section>
   );
 }
 

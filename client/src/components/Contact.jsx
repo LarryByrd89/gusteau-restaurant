@@ -19,9 +19,9 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <section id="contact">
-      <h3>Get In Touch</h3>
-      <h2>How To Contact Us</h2>
+    <section id="contact" className='container'>
+      <h2>Get In Touch</h2>
+      <h3>From Compliments To Complaints</h3>
       <h3>575-627-0144</h3>
       
 
