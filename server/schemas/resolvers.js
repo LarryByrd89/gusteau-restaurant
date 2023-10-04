@@ -1,14 +1,23 @@
 const { Profile, Reservation } = require("../models");
+const { signToken } = require("../utils/auth");
+const { AuthenticationError } = require("apollo-server-express");
 
 const resolvers = {
   Query: {
     profile: async (parent, { profileId }) => {
-      return Profile.findOne({
+      return await Profile.findOne({
         _id: profileId,
       });
     },
     reservations: async () => {
       return Reservation.find();
+    },
+    me: async (parent, args, context) => {
+      console.log(context);
+      if (context.req.profile._id) {
+        return await Profile.findOne({ _id: context.req.profile._id });
+      }
+      throw new AuthenticationError("You need to be logged in!");
     },
   },
 
@@ -42,9 +51,10 @@ const resolvers = {
         throw new AuthenticationError("Incorrect password!");
       }
 
-   // const token = signToken(profile);
-      // return { token, profile };
-      return profile;
+      const token = signToken(profile);
+
+      const context = { profile: profile };
+      return { token, profile, context };
     },
 
     removeProfile: async (parent, { profileId }) => {
