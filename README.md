@@ -23,13 +23,13 @@ Le Bon Manges is a web application that offers an elegant and convenient way for
 
 - **Menu Exploration:** Browse through our meticulously crafted menu, featuring a wide array of culinary delights, each prepared to perfection.
 
-- **Guest Membership:** Unlock exclusive perks and benefits by becoming a guest member. Enjoy special discounts, event invitations, and more.
+- **Login & Register Pages:** Save user data by creating an account for future membership perks & newsletter development.
 
 - **About Us:** Get to know the story behind Le Bon Manges, our commitment to quality, and our dedication to creating unforgettable moments.
 
 - **Contact Us:** Have questions or feedback? Reach out to us through our contact form, and our friendly staff will assist you promptly.
 
-<!-- - **Reservastions:** Have questions or feedback? Reach out to us through our contact form, and our friendly staff will assist you promptly. -->
+- **Reservations:** Reach out to us through our reservation form, and our friendly staff will assist you promptly.
 
 ## Getting Started
 
@@ -90,9 +90,21 @@ npm run develop
 
 ![Alt text](client/src/assets/images/readme/Menu.png)
 
+- Register & Login
+
+![Alt text](client/src/assets/images/readme/login.png)
+![Alt text](client/src/assets/images/readme/Register.png)
 - Newsletter Footer
 
 ![Alt text](client/src/assets/images/readme/Footer.png)
+
+- Date Picker for Reservations
+
+![Alt text](<client/src/assets/images/readme/Reservation page.png>)
+
+## Contributing
+
+If you would like to contribute as a developer, you can submit a pull request.
 
 ## Asset Credits
 
