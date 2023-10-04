@@ -1,19 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Footer.css'; 
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 function Footer() {
   return (
     <footer>
-
       <div className="footer-container">
         <h4>Sign Up For Our Quarterly Newsletter For Updates </h4>
         <div className="newsletter">
           <div className="form-div">
             <form>
-
               <input
-                id="footer-email"
+                id="email"
                 type="email"
                 placeholder="Enter Email"
                 required
