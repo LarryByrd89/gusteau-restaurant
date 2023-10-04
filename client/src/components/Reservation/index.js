@@ -14,6 +14,7 @@ function Reservation() {
   };
   const handleTimeChange = (e) => {
     setSelectedTime(e.target.value);
+    const isTimeValid = newTime >= '12:00' && newTime <= '21:00';
   };
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);

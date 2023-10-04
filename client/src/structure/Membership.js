@@ -3,76 +3,76 @@ import { useMutation } from "@apollo/client";
 import { ADD_PROFILE, LOGIN_USER } from "../utils/mutations";
 
 function Membership() {
-  const [registerData, setRegisterData] = useState({
-    userName: "",
-    email: "",
-    password: "",
-    firstName: "",
-    lastName: "",
-    memberType: "standard",
-  });
-  const [loginData, setLoginData] = useState({
-    userName: "",
-    password: "",
-  });
-  const [loginTab, setLoginTab] = useState(false);
-  const [addProfile] = useMutation(ADD_PROFILE);
-  const [login] = useMutation(LOGIN_USER);
+  // const [registerData, setRegisterData] = useState({
+  //   userName: "",
+  //   email: "",
+  //   password: "",
+  //   firstName: "",
+  //   lastName: "",
+  //   memberType: "standard",
+  // });
+  // const [loginData, setLoginData] = useState({
+  //   userName: "",
+  //   password: "",
+  // });
+  // const [loginTab, setLoginTab] = useState(false);
+  // const [addProfile] = useMutation(ADD_PROFILE);
+  // const [login] = useMutation(LOGIN_USER);
 
-  const handleRegisterChange = (e) => {
-    setRegisterData({ ...registerData, [e.target.name]: e.target.value });
-  };
+  // const handleRegisterChange = (e) => {
+  //   setRegisterData({ ...registerData, [e.target.name]: e.target.value });
+  // };
 
-  const handleLoginChange = (e) => {
-    setLoginData({ ...loginData, [e.target.name]: e.target.value });
-  };
+  // const handleLoginChange = (e) => {
+  //   setLoginData({ ...loginData, [e.target.name]: e.target.value });
+  // };
 
-  const handleRegister = async (e) => {
-    e.preventDefault();
-    try {
-      const { data } = await addProfile({
-        variables: {
-          userName: registerData.userName,
-          password: registerData.password,
-          email: registerData.email,
-          firstName: registerData.firstName,
-          lastName: registerData.lastName,
-          memberType: registerData.memberType,
-        },
-      });
-      setRegisterData({
-        userName: "",
-        email: "",
-        password: "",
-        firstName: "",
-        lastName: "",
-        memberType: "standard",
-      });
+  // const handleRegister = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const { data } = await addProfile({
+  //       variables: {
+  //         userName: registerData.userName,
+  //         password: registerData.password,
+  //         email: registerData.email,
+  //         firstName: registerData.firstName,
+  //         lastName: registerData.lastName,
+  //         memberType: registerData.memberType,
+  //       },
+  //     });
+  //     setRegisterData({
+  //       userName: "",
+  //       email: "",
+  //       password: "",
+  //       firstName: "",
+  //       lastName: "",
+  //       memberType: "standard",
+  //     });
 
-      // JWT token here if you want
-      // route them back to home with success message?
-    } catch (error) {
-      console.error(error);
-      // Handle registration error
-      // display error message
-    }
-  };
+  //     // JWT token here if you want
+  //     // route them back to home with success message?
+  //   } catch (error) {
+  //     console.error(error);
+  //     // Handle registration error
+  //     // display error message
+  //   }
+  // };
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const { data } = await login({
-        variables: {
-          userName: loginData.userName,
-          password: loginData.password,
-        },
-      });
-    } catch (error) {
-      console.error(error);
-      // Handle registration error
-      // display error message
-    }
-  };
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const { data } = await login({
+  //       variables: {
+  //         userName: loginData.userName,
+  //         password: loginData.password,
+  //       },
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //     // Handle registration error
+  //     // display error message
+  //   }
+  // };
 
   return (
     <>
@@ -86,7 +86,7 @@ function Membership() {
           </p>
         </div>
 
-        <div className="memberpage container">
+        {/* <div className="memberpage container">
           <div className="wrapper">
             <div className="tabs">
               <div className="tab">
@@ -207,17 +207,33 @@ function Membership() {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="member-type">
             <div id="wine-perk" className="wine-card">
-              <p>Wine Perk</p>
+              <div className="rounded-border">
+              <h3>Wine Perk</h3>
+              <p>What This Plan Offers</p>
+              <ul>
+                <li>Specialty Wine Menu, Per Visit</li>
+                <li>One Small Bottle Of Wine Per Month, Per Visit</li>
+                <li>Specialty Holiday Mixes</li>
+                <li>Exclusive Cheese Access </li>
+               </ul>
+              </div>
             </div>
             <div id="desert-club" className="desert-card">
-              <p>Desert Perk</p>
+            <div className="rounded-border">
+
+              <ul>
+                <li>Specialty Wine Menu, Per Visit</li>
+                <li>One Small Bottle Of Wine Per Month, Per Visit</li>
+                <li>Specialty Holiday Mixes</li>
+                <li>Exclusive Cheese Access </li>
+               </ul>
             </div>
           </div>
-        </div>
-      </section>
+          </div>
+</section>
     </>
   );
 }

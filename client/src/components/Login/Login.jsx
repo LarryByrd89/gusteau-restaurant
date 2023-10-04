@@ -71,7 +71,7 @@ const Login = (props) => {
           <br />
           <br />
           <br />
-          <button type="submit">Login</button>
+          <button type="submit" className="logpage-btn">Login</button>
           <br />
           <br />
           <Link to="/register"> Click here to register </Link>
