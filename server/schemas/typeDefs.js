@@ -11,6 +11,12 @@ const typeDefs = gql`
     memberType: String
   }
 
+  type Auth {
+    token: ID!
+    profile: Profile
+    context: Profile
+  }
+
   type Reservation {
     _id: ID
     firstName: String
@@ -23,6 +29,7 @@ const typeDefs = gql`
   type Query {
     profile(profileId: ID!): Profile
     reservations: [Reservation!]!
+    me: Profile
   }
 
   type Mutation {
@@ -41,7 +48,7 @@ const typeDefs = gql`
       selectedTime: String!
       email: String!
     ): Reservation
-    login(userName: String!, password: String!): Profile
+    login(userName: String!, password: String!): Auth
     updateMemberType(profileId: ID!, memberType: String!): Profile
     removeProfile(profileId: ID!): Profile
   }
