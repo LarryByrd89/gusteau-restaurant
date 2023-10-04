@@ -211,7 +211,7 @@ function Membership() {
           <div className="member-type">
             <div id="wine-perk" className="wine-card">
               <div className="rounded-border">
-              <h3>Wine Perk</h3>
+              <h3>Vin De Patron</h3>
               <p>What This Plan Offers</p>
               <ul>
                 <li>Specialty Wine Menu, Per Visit</li>
@@ -221,14 +221,14 @@ function Membership() {
                </ul>
               </div>
             </div>
-            <div id="desert-club" className="desert-card">
+            <div id="desert-club" className="dessert-card">
             <div className="rounded-border">
-
+            <h3>Dessert Du Patron </h3>
               <ul>
-                <li>Specialty Wine Menu, Per Visit</li>
-                <li>One Small Bottle Of Wine Per Month, Per Visit</li>
-                <li>Specialty Holiday Mixes</li>
-                <li>Exclusive Cheese Access </li>
+                <li>Specialty Dessert Menu, Per Visit</li>
+                <li>Three Times A Month, Per Visit To Take Home One Dessert Item Of A Cold Or Hot Item</li>
+                <li>Specialty Holiday Menu</li>
+                <li>Exclusive Sweet Assortments For Yourself Or as Gifts</li>
                </ul>
             </div>
           </div>

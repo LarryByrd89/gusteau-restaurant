@@ -582,11 +582,6 @@ p {
 }
 .member-type .wine-card {
   background-image: url(../images/valentin-lacoste-4eyAy57ObtQ-unsplash.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 700px;
-  border-radius: 12px;
-  padding: 13px;
 }
 .member-type .wine-card h3 {
   font-size: 32px;
@@ -595,13 +590,13 @@ p {
 .member-type .wine-card p {
   font-size: 24px;
 }
-.member-type .desert-card {
+.member-type .dessert-card {
   background-image: url(../images/jordane-mathieu-9trWI5ULtJQ-unsplash.jpg);
   background-size: cover;
+  background-position: center;
   height: 700px;
   border-radius: 12px;
-  padding: 0px 13px;
-  background-position: center left;
+  padding: 13px;
 }
 .member-type p {
   font-size: 24px;
