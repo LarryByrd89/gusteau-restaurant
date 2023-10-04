@@ -59,9 +59,11 @@ function Nav() {
                       Menu
                     </Link>
                   </li>
+                  <li>
                   <Link to="/reservation" onClick={closeMenu}>
                       Make A Reservation
                     </Link>
+                  </li>
                   <li>
                     <Link to="/guest-membership" onClick={closeMenu}>
                       Patron Perks
