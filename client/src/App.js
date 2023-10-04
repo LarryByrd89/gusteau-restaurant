@@ -13,11 +13,13 @@ import { ApolloProvider } from "@apollo/client";
 import client from "./utils/client";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router scrollRestoration="auto">
+      <AuthProvider>
         <div>
           <Nav />
           <Routes>
@@ -32,6 +34,7 @@ function App() {
           </Routes>
           <Footer />
         </div>
+        </AuthProvider>
       </Router>
     </ApolloProvider>
   );
