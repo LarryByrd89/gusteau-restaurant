@@ -34,7 +34,7 @@ function Footer() {
             <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <Link to="/reservations">Reservations</Link>
+            <Link to="/reservation">Reservations</Link>
           </li>
           <li>
             <Link to="/guest-membership">Guest Membership</Link>
