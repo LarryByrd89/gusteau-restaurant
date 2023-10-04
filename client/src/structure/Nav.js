@@ -12,6 +12,10 @@ function Nav() {
     setMenuOpen(false);
   };
 
+  const isAuthenticated = data && data.me && data.me.userName;
+  console.log("Data:", data);
+  console.log("IsAuthenticated:", isAuthenticated);
+  
   return (
     <>
       <header>
