@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import siteIcon from '../assets/images/Logo.png';
 import { Link } from 'react-router-dom';
+import { useAuth } from './AuthContext';
 
 function Nav() {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const { user, logout, isAuthenticated } = useAuth();
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -35,6 +37,13 @@ function Nav() {
                   <span className="hamburger"></span>
                 </span>
                 <ul>
+                <li>
+                {isAuthenticated() ? (
+                  <span>
+                    Welcome, {user.username}! <button onClick={logout}>Logout</button>
+                  </span>
+                ) : null}
+                  </li>
                   <li>
                     <Link to="/" onClick={closeMenu}>
                       Home
