@@ -45,13 +45,25 @@ export const UPDATE_MEMBERTYPE = gql`
 export const LOGIN_USER = gql`
   mutation login($userName: String!, $password: String!) {
     login(userName: $userName, password: $password) {
-      _id
-      userName
-      email
-      password
-      firstName
-      lastName
-      memberType
+      token
+      profile {
+        _id
+        userName
+        email
+        password
+        firstName
+        lastName
+        memberType
+      }
+      context {
+        _id
+        userName
+        email
+        password
+        firstName
+        lastName
+        memberType
+      }
     }
   }
 `;
