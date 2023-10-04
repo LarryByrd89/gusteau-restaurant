@@ -1,31 +1,47 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
 function Reservation() {
   const [selectedDate, setSelectedDate] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [email, setEmail] = useState("");
+  const [isTimeValid, setIsTimeValid] = useState(true);
+
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+
   const handleTimeChange = (e) => {
-    setSelectedTime(e.target.value);
+    const newTime = e.target.value;
+    const isValid = newTime >= "12:00" && newTime <= "21:00";
+
+    if (isValid) {
+      setSelectedTime(newTime);
+    }
+
+    setIsTimeValid(isValid);
   };
+
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
   };
+
   const handleLastNameChange = (e) => {
     setLastName(e.target.value);
   };
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Placeholder for form submission to server
   };
+
   return (
     <div>
       <h2>Make a Reservation</h2>
@@ -65,8 +81,11 @@ function Reservation() {
             type="time"
             value={selectedTime}
             onChange={handleTimeChange}
+            minTime="12:00"
+            maxTime="21:00"
             required
           />
+          {!isTimeValid && <p style={{ color: "red" }}>Invalid time</p>}
         </div>
         <div>
           <label>Email:</label>
@@ -84,4 +103,5 @@ function Reservation() {
     </div>
   );
 }
+
 export default Reservation;
